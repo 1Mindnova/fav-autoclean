@@ -3,20 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="description" content="Fav-AutoClean – Profi-Reinigung für Sofa, Teppich, Auto & Stuhl. Frisch, schnell & zuverlässig direkt bei dir.">
+  <meta name="keywords" content="Sofareinigung,Teppichreinigung,Autoinnenreinigung,Stuhlpolsterreinigung,Reinigung,Polsterreinigung">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="canonical" href="https://1mindnova.github.io/fav-autoclean/">
   <title>Fav-AutoClean | Profi-Reinigung</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Fav-AutoClean",
+    "image": "https://1mindnova.github.io/fav-autoclean/img/logo.jpg",
+    "telephone": "+4915906655267",
+    "email": "fevronia63@gmail.com",
+    "address": { "@type": "PostalAddress","addressCountry": "DE" },
+    "url": "https://1mindnova.github.io/fav-autoclean/",
+    "description": "Profi-Reinigung für Sofa, Teppich, Auto & Stuhl – Frisch, schnell & zuverlässig."
+  }
+  </script>
 </head>
 <body>
-
   <nav class="nav">
     <img src="img/logo.jpg" alt="Fav-AutoClean Logo" class="nav-logo">
-    <a href="#services">Leistungen</a>
-    <a href="#kontakt">Kontakt</a>
+    <div class="nav-links">
+      <a href="#services">Leistungen</a>
+      <a href="#kontakt">Kontakt</a>
+    </div>
+    <div class="lang-switcher">
+      <div class="lang-item"><a href="?lang=de"><span class="lang-emoji">🇩🇪</span><span class="lang-label">Deutsch</span></a></div>
+      <div class="lang-item"><a href="?lang=ro"><span class="lang-emoji">🇷🇴</span><span class="lang-label">Română</span></a></div>
+      <div class="lang-item"><a href="?lang=ru"><span class="lang-emoji">🇷🇺</span><span class="lang-label">Русский</span></a></div>
+      <div class="lang-item"><a href="?lang=en"><span class="lang-emoji">🇬🇧</span><span class="lang-label">English</span></a></div>
+      <div class="lang-item"><a href="?lang=tr"><span class="lang-emoji">🇹🇷</span><span class="lang-label">Türkçe</span></a></div>
+      <div class="lang-item"><a href="?lang=hr"><span class="lang-emoji">🇭🇷</span><span class="lang-label">Hrvatski</span></a></div>
+      <div class="lang-item"><a href="?lang=es"><span class="lang-emoji">🇪🇸</span><span class="lang-label">Español</span></a></div>
+      <div class="lang-item"><a href="?lang=it"><span class="lang-emoji">🇮🇹</span><span class="lang-label">Italiano</span></a></div>
+      <div class="lang-item"><a href="?lang=sq"><span class="lang-emoji">🇦🇱</span><span class="lang-label">Shqip</span></a></div>
+      <div class="lang-item"><a href="?lang=fr"><span class="lang-emoji">🇫🇷</span><span class="lang-label">Français</span></a></div>
+    </div>
   </nav>
 
   <header class="header">
+    <img src="img/couch.jpg" alt="Aufmerksamkeitsbild" class="header-img">
     <div class="header-content">
       <h1>Fav-AutoClean</h1>
       <p>Deine Profi-Reinigung für Sofa, Teppich, Auto & Stuhl</p>
@@ -34,7 +63,7 @@
       <img src="img/teppich.jpg" alt="Teppichreinigung">
       <h2>Teppichreinigung</h2>
       <p>Intensive Tiefenreinigung & Geruchsentfernung direkt bei dir.</p>
-      <div class="price">29 € /m² (zzgl. 15 € Anfahrt)</div>
+      <div class="price">29 €/m² (zzgl. 15 € Anfahrt)</div>
     </div>
     <div class="service-card">
       <img src="img/auto.jpg" alt="Autoinnenreinigung">
@@ -53,8 +82,7 @@
   <section id="kontakt" class="form-section">
     <h2>Jetzt Anfrage senden</h2>
     <form class="form" action="https://formspree.io/f/xdkzyqzv" method="POST">
-      <label>
-        Art der Anfrage
+      <label>Art der Anfrage
         <select name="service" required>
           <option value="">-- Bitte wählen --</option>
           <option value="Sofareinigung">Sofareinigung</option>
@@ -64,21 +92,22 @@
           <option value="Anderes">Anderes</option>
         </select>
       </label>
-      <label>
-        Deine E-Mail
+      <label>Deine E-Mail
         <input type="email" name="email" placeholder="E-Mail hier eingeben" required>
       </label>
-      <label>
-        Nachricht
-        <textarea name="message" placeholder="Deine Nachricht…" rows="5"></textarea>
+      <label>Nachricht
+        <textarea name="message" placeholder="Deine Nachricht…" rows="4"></textarea>
       </label>
       <button type="submit">Absenden</button>
     </form>
+    <div class="contact-info">
+      <p><strong>E-Mail:</strong> fevronia63@gmail.com</p>
+      <p><strong>Telefon:</strong> +49 1590 6655267</p>
+    </div>
   </section>
 
   <footer>
     &copy; 2025 Fav-AutoClean • <a href="#services">Nach oben</a>
   </footer>
-
 </body>
 </html>
