@@ -1,109 +1,238 @@
-<<<<<<< HEAD
-/* Reset & Basis */
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Open Sans',sans-serif;background:#f5f0e8;color:#333;line-height:1.6}
-img{display:block;max-width:100%}
+/* RESET & BASIS */
+*, *::before, *::after {
+  margin:0; padding:0; box-sizing:border-box;
+}
+body {
+  font-family:'Open Sans',sans-serif;
+  background:#f5f0e8;
+  color:#333;
+  line-height:1.6;
+}
+html {
+  scroll-behavior: smooth;
+}
 
-/* Navigation */
-.nav{position:sticky;top:0;background:#1e4128;display:flex;align-items:center;justify-content:space-between;padding:.5rem 1rem;z-index:10}
-.nav-logo{height:40px}
-.nav-links a{color:#f5efe4;text-decoration:none;font-weight:600;margin:0 1rem;transition:color .3s}
-.nav-links a:hover{color:#a08b53}
+/* NAVIGATION */
+.nav {
+  position:sticky; top:0;
+  background:#1e4128;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:.75rem 1.5rem;
+  z-index:100;
+}
+.nav-logo {
+  height:60px;
+  transition:transform .3s;
+}
+.nav-logo:hover {
+  transform:scale(1.1);
+}
 
-/* Sprach-Emojis */
-.lang-switcher{display:flex;align-items:center}
-.lang-item{margin-left:1rem;text-align:center}
-.lang-item a{color:#f5efe4;text-decoration:none;display:flex;flex-direction:column;align-items:center;font-size:1rem;transition:transform .2s}
-.lang-item a:hover{transform:scale(1.2)}
-.lang-emoji{font-size:1.5rem}
-.lang-label{font-size:0.75rem;margin-top:0.1rem;color:#f5efe4}
+/* LINKS MIT FLEX-MITTIGUNG */
+.nav-links {
+  display:flex;
+  gap:2rem;
+}
+.nav-links a {
+  color:#f5efe4;
+  text-decoration:none;
+  font-weight:600;
+  font-size:1rem;
+  transition:color .3s;
+}
+.nav-links a:hover {
+  color:#a08b53;
+}
 
-/* Header */
-.header{text-align:center;padding:2rem 1rem}
-.header-img{width:80%;max-width:800px;margin:0 auto 1.5rem;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.1)}
-.header-content h1{font-family:'Playfair Display',serif;font-size:2.8rem;color:#1e4128}
-.header-content p{margin-top:.5rem;font-size:1.1rem;color:#555}
+/* SPRACHSCHALTER */
+.lang-switcher {
+  display:flex;
+  gap:1rem;
+}
+.lang-switcher a {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-decoration:none;
+  transition:transform .2s;
+}
+.lang-switcher a:hover {
+  transform:scale(1.2);
+}
+.lang-switcher .emoji {
+  font-size:1.5rem;
+}
+.lang-switcher .code {
+  font-size:.75rem;
+  color:#f5efe4;
+  margin-top:.15rem;
+  letter-spacing: .5px;
+}
 
-/* Services Grid – 2 Spalten */
-.services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem;max-width:900px;margin:2rem auto;padding:0 1rem}
-@media(max-width:800px){.services-grid{grid-template-columns:1fr}}
-.service-card{background:#fff;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.1);transition:transform .3s,box-shadow .3s;overflow:hidden}
-.service-card:hover{transform:translateY(-5px);box-shadow:0 8px 20px rgba(0,0,0,.15)}
-.service-card img{width:100%;height:200px;object-fit:cover}
-.service-card h2{font-family:'Playfair Display',serif;font-size:1.4rem;margin:1rem 0 .5rem;color:#1e4128;text-align:center}
-.service-card p{padding:0 1rem;font-size:.95rem;color:#555;text-align:center}
-.service-card .price{font-weight:600;color:#1e4128;margin:.75rem 0 1rem;text-align:center}
-
-/* Formular & Kontaktinfo */
-.form-section{background:#e9e2d6;padding:2rem 1rem;margin-top:2rem}
-.form-section h2{text-align:center;font-family:'Playfair Display',serif;font-size:2rem;color:#1e4128;margin-bottom:1rem}
-.form{max-width:600px;margin:0 auto;display:grid;gap:1rem}
-.form label{display:flex;flex-direction:column;font-weight:600;color:#333}
-.form input,.form select,.form textarea{margin-top:.5rem;padding:.75rem;border:2px solid #ccc;border-radius:6px;font-size:1rem;font-family:inherit}
-.form button{background:#1e4128;color:#f5efe4;border:none;padding:.75rem;font-size:1.1rem;border-radius:6px;cursor:pointer;font-weight:600;transition:background .3s}
-.form button:hover{background:#16321e}
-.contact-info{max-width:600px;margin:1.5rem auto 0;text-align:center}
-.contact-info p{margin:.25rem 0;font-size:1rem;color:#1e4128}
-
-/* Footer */
-footer{text-align:center;padding:1rem 0;background:#1e4128;color:#f5efe4}
-footer a{color:#a08b53;text-decoration:none}
-=======
-/* Überschriften im Hero */
+/* HERO */
+.hero {
+  height:80vh;
+  background:url('../img/couch.jpg') center/cover no-repeat fixed;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:3rem;
+}
+.badge {
+  background:rgba(255,255,255,0.92);
+  padding:2.5rem 3rem;
+  border-radius:8px;
+  text-align:center;
+  box-shadow:0 6px 18px rgba(0,0,0,.2);
+  animation:float 6s ease-in-out infinite;
+  max-width:85%;
+}
+@keyframes float {
+  0%,100% { transform:translateY(0); }
+  50%     { transform:translateY(-8px); }
+}
 .badge h1 {
-  font-size:4.2rem;        /* größer */
-  letter-spacing:1px;      /* mehr Abstand */
-  line-height:1.1;
-}
-.badge p {
-  font-size:1.5rem;        /* etwas größer */
-  letter-spacing:0.5px;
-}
-
-/* Service-Karten */
-.service-card h2 {
-  font-size:1.8rem;        /* größer */
-  letter-spacing:0.5px;
-  margin:1.25rem 1rem .75rem;
-}
-.service-card p {
-  font-size:1.1rem;        /* lesbarer Fließtext */
-  line-height:1.5;
-  margin-bottom:1rem;
-}
-.service-card .price {
-  font-size:1.15rem;       /* Preisschrift leicht vergrößert */
-  font-weight:700;
-  margin-bottom:1.25rem;
-}
-
-/* Formular & Kontaktinfo */
-.form-section h2 {
-  font-size:2.4rem;        /* kräftigere Section-Headline */
+  font-family:'Playfair Display',serif;
+  font-size:3.8rem;
+  color:#1e4128;
+  margin-bottom:.5rem;
   letter-spacing:1px;
 }
+.badge p {
+  font-size:1.4rem;
+  color:#555;
+  letter-spacing:.5px;
+}
+
+/* SERVICES GRID */
+.services-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:3rem;
+  max-width:960px;
+  margin:0 auto 4rem;
+  padding:0 1rem;
+}
+@media(max-width:800px) {
+  .services-grid { grid-template-columns:1fr; }
+}
+.service-card {
+  background:#fff;
+  border-radius:8px;
+  overflow:hidden;
+  box-shadow:0 4px 12px rgba(0,0,0,.1);
+  transition:transform .3s, box-shadow .3s;
+}
+.service-card:hover {
+  transform:translateY(-5px);
+  box-shadow:0 8px 20px rgba(0,0,0,.15);
+}
+.service-card img {
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  transition:transform .3s;
+}
+.service-card:hover img {
+  transform:scale(1.05);
+}
+.service-card h2 {
+  font-family:'Playfair Display',serif;
+  font-size:1.8rem;
+  color:#1e4128;
+  margin:1.25rem 1rem .75rem;
+  text-align:center;
+  letter-spacing:.5px;
+}
+.service-card p {
+  font-size:1.1rem;
+  color:#555;
+  line-height:1.5;
+  margin:0 1.25rem 1rem;
+  text-align:center;
+}
+.service-card .price {
+  font-size:1.15rem;
+  font-weight:700;
+  color:#1e4128;
+  margin:0 1.25rem 1.25rem;
+  text-align:center;
+}
+
+/* FORMULAR & KONTAKTINFO */
+.form-section {
+  background:#e9e2d6;
+  padding:3rem 1rem 2rem;
+  margin-bottom:4rem;
+}
+.form-section h2 {
+  text-align:center;
+  font-family:'Playfair Display',serif;
+  font-size:2.4rem;
+  color:#1e4128;
+  margin-bottom:1.5rem;
+}
+.form {
+  max-width:650px;
+  margin:0 auto;
+  display:grid;
+  gap:1.25rem;
+}
 .form label {
-  font-size:1.05rem;       /* größere Feldbeschriftung */
+  font-size:1.05rem;
+  font-weight:600;
+  color:#333;
+  display:flex;
+  flex-direction:column;
 }
 .form input,
 .form select,
 .form textarea {
-  font-size:1rem;          /* klarere Eingabetexte */
+  margin-top:.5rem;
+  padding:.85rem;
+  border:2px solid #ccc;
+  border-radius:6px;
+  font-size:1rem;
+  font-family:inherit;
 }
 .form button {
-  font-size:1.2rem;        /* prominenter Submit-Button */
-  letter-spacing:0.5px;
+  background:#1e4128;
+  color:#f5efe4;
+  border:none;
+  padding:.85rem;
+  font-size:1.2rem;
+  font-weight:600;
+  border-radius:6px;
+  cursor:pointer;
+  transition:background .3s;
+}
+.form button:hover {
+  background:#16321e;
+}
+.contact-info {
+  max-width:650px;
+  margin:2rem auto 0;
+  text-align:center;
 }
 .contact-info p {
-  font-size:1.15rem;       /* deutlicher Kontakttext */
+  font-size:1.15rem;
+  color:#1e4128;
   line-height:1.6;
+  margin:.5rem 0;
 }
 
-/* Footer */
+/* FOOTER */
 footer {
-  font-size:1rem;          /* Footer leicht vergrößert */
+  text-align:center;
+  padding:2rem 0;
+  background:#1e4128;
+  color:#f5efe4;
+  font-size:1rem;
 }
 footer a {
+  color:#a08b53;
+  text-decoration:none;
   font-weight:600;
 }
->>>>>>> bed28dc30fd0c98a5a47802411522962fe66f714
