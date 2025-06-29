@@ -10,31 +10,26 @@
 </head>
 <body>
 
-  <!-- NAVIGATION -->
   <nav class="nav">
     <img src="img/logo.jpg" alt="Fav-AutoClean Logo" class="nav-logo">
-
     <div class="nav-links">
       <a href="#services" data-i18n="nav.services">Leistungen</a>
       <a href="#kontakt" data-i18n="nav.contact">Kontakt</a>
     </div>
-
-    <!-- Sprach-Links legen lang-Parameter fest und reloaden Seite -->
     <div class="lang-switcher">
       <a href="?lang=de">DE</a>
-      <a href="?lang=en">EN</a>
-      <a href="?lang=ro">RO</a>
-      <a href="?lang=ru">RU</a>
-      <a href="?lang=tr">TR</a>
-      <a href="?lang=hr">HR</a>
-      <a href="?lang=es">ES</a>
-      <a href="?lang=it">IT</a>
-      <a href="?lang=sq">AL</a>
-      <a href="?lang=fr">FR</a>
+      <a href="?lang=en">ENG</a>
+      <a href="?lang=ro">ROM</a>
+      <a href="?lang=ru">RUS</a>
+      <a href="?lang=tr">TUR</a>
+      <a href="?lang=hrv">HRV</a>
+      <a href="?lang=es">ESP</a>
+      <a href="?lang=it">ITA</a>
+      <a href="?lang=sq">ALB</a>
+      <a href="?lang=fr">FRA</a>
     </div>
   </nav>
 
-  <!-- HERO -->
   <header class="hero">
     <div class="badge">
       <h1 data-i18n="hero.title">Fav-AutoClean</h1>
@@ -42,7 +37,6 @@
     </div>
   </header>
 
-  <!-- SERVICES -->
   <section id="services" class="services-grid">
     <div class="service-card">
       <img src="img/sofa.jpg" alt="" data-i18n-img-alt="services.sofa.alt">
@@ -70,7 +64,6 @@
     </div>
   </section>
 
-  <!-- KONTAKT -->
   <section id="kontakt" class="form-section">
     <h2 data-i18n="contact.header">Jetzt Anfrage senden</h2>
     <form class="form" action="https://formspree.io/f/xdkzyqzv" method="POST">
@@ -100,27 +93,41 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <p>&copy; 2025 Fav-AutoClean • <a href="#services" data-i18n="footer.top">Nach oben</a></p>
   </footer>
 
-  <!-- TRANSLATION SCRIPT -->
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // 1) Sprache aus URL auslesen, default "de"
-      const params = new URLSearchParams(window.location.search);
-      const lang = params.get('lang') || 'de';
+    document.addEventListener('DOMContentLoaded',()=>{
+      const params = new URLSearchParams(location.search);
+      const lang = (params.get('lang')||'de').toLowerCase();
 
-      // 2) Übersetzungs-Wörterbuch
-      const translations = {
+      const dict = {
+        de: { 
+          title:"Fav-AutoClean | Profi-Reinigung",
+          "nav.services":"Leistungen","nav.contact":"Kontakt",
+          "hero.title":"Fav-AutoClean","hero.subtitle":"Deine Profi-Reinigung für Sofa, Teppich, Auto & Stuhl",
+          "services.sofa.alt":"Sofa-Reinigung","services.sofa.title":"Sofareinigung",
+          "services.sofa.desc":"Schonende, materialgerechte Pflege für Polster- & Ledersofas.","services.sofa.price":"ab 45 € pro Sofa (zzgl. 15 € Anfahrt)",
+          "services.carpet.alt":"Teppich­reinigung","services.carpet.title":"Teppichreinigung",
+          "services.carpet.desc":"Intensive Tiefenreinigung & Geruchsentfernung direkt bei dir.","services.carpet.price":"29 €/m² (zzgl. 15 € Anfahrt)",
+          "services.auto.alt":"Autoinnen­reinigung","services.auto.title":"Autoinnenreinigung",
+          "services.auto.desc":"Gründliches Saugen, Polsterpflege & Frischduft-Finish.","services.auto.price":"ab 59 € pro Fahrzeug (zzgl. 15 € Anfahrt)",
+          "services.chair.alt":"Stuhlpolster­reinigung","services.chair.title":"Stuhlpolster­reinigung",
+          "services.chair.desc":"Zielgerichtete Reinigung für Einzel- oder Bürostühle.","services.chair.price":"ab 12 € pro Stuhl (zzgl. 15 € Anfahrt)",
+          "contact.header":"Jetzt Anfrage senden","contact.field.service":"Art der Anfrage",
+          "contact.service.placeholder":"-- Bitte wählen --","contact.field.email":"Deine E-Mail",
+          "contact.email.placeholder":"E-Mail hier eingeben","contact.field.message":"Nachricht",
+          "contact.message.placeholder":"Deine Nachricht…","contact.button":"Absenden",
+          "contact.email.label":"E-Mail:","contact.phone.label":"Telefon:",
+          "footer.top":"Nach oben"
+        },
         en: {
-          title: "Fav-AutoClean | Professional Cleaning",
-          "nav.services": "Services", "nav.contact": "Contact",
-          "hero.title": "Fav-AutoClean", "hero.subtitle": "Your pro cleaning for sofa, carpet, car & chair",
-          "services.sofa.alt": "Sofa cleaning", "services.sofa.title": "Sofa Cleaning",
-          "services.sofa.desc": "Gentle, material-appropriate care for upholstered & leather sofas.",
-          "services.sofa.price": "from €45 per sofa (+ €15 travel)",
+          title:"Fav-AutoClean | Professional Cleaning",
+          "nav.services":"Services","nav.contact":"Contact",
+          "hero.title":"Fav-AutoClean","hero.subtitle":"Your pro cleaning for sofa, carpet, car & chair",
+          "services.sofa.alt":"Sofa cleaning","services.sofa.title":"Sofa Cleaning",
+          "services.sofa.desc":"Gentle, material-appropriate care for upholstered & leather sofas.","services.sofa.price":"from €45 per sofa (+ €15 travel)",
           "services.carpet.alt":"Carpet cleaning","services.carpet.title":"Carpet Cleaning",
           "services.carpet.desc":"Intensive deep cleaning & odor removal at your place.","services.carpet.price":"€29 / m² (+ €15 travel)",
           "services.auto.alt":"Car interior cleaning","services.auto.title":"Car Interior Cleaning",
@@ -131,30 +138,182 @@
           "contact.service.placeholder":"-- Please choose --","contact.field.email":"Your email",
           "contact.email.placeholder":"Enter your email","contact.field.message":"Message",
           "contact.message.placeholder":"Your message…","contact.button":"Submit",
-          "contact.email.label":"Email:","contact.phone.label":"Phone:","footer.top":"Back to top"
+          "contact.email.label":"Email:","contact.phone.label":"Phone:",
+          "footer.top":"Back to top"
+        },
+        ro: {
+          title:"Fav-AutoClean | Curățenie Profesională",
+          "nav.services":"Servicii","nav.contact":"Contact",
+          "hero.title":"Fav-AutoClean","hero.subtitle":"Curățenie profesională pentru canapea, covor, mașină și scaun",
+          "services.sofa.alt":"Curățare canapea","services.sofa.title":"Curățare canapea",
+          "services.sofa.desc":"Întreținere delicată, adaptată materialului, pentru canapele tapițate și din piele.","services.sofa.price":"de la 45 € per canapea (+ 15 € transport)",
+          "services.carpet.alt":"Curățare covor","services.carpet.title":"Curățare covor",
+          "services.carpet.desc":"Curățare profundă & eliminare de mirosuri la tine acasă.","services.carpet.price":"29 €/m² (+ 15 € transport)",
+          "services.auto.alt":"Curățare interior auto","services.auto.title":"Curățare interior auto",
+          "services.auto.desc":"Aspirare completă, îngrijire tapițerie & parfum proaspăt.","services.auto.price":"de la 59 € per vehicul (+ 15 € transport)",
+          "services.chair.alt":"Curățare tapițerie scaun","services.chair.title":"Curățare tapițerie scaun",
+          "services.chair.desc":"Curățare țintită pentru scaune individuale sau de birou.","services.chair.price":"de la 12 € per scaun (+ 15 € transport)",
+          "contact.header":"Trimite acum solicitarea","contact.field.service":"Tipul solicitării",
+          "contact.service.placeholder":"-- Te rugăm să alegi --","contact.field.email":"Email-ul tău",
+          "contact.email.placeholder":"Introdu email-ul tău","contact.field.message":"Mesaj",
+          "contact.message.placeholder":"Mesajul tău…","contact.button":"Trimite",
+          "contact.email.label":"Email:","contact.phone.label":"Telefon:",
+          "footer.top":"Sus"
+        },
+        ru: {
+          title:"Fav-AutoClean | Профессиональная уборка",
+          "nav.services":"Услуги","nav.contact":"Контакт",
+          "hero.title":"Fav-AutoClean","hero.subtitle":"Профессиональная уборка диванов, ковров, автомобилей и стульев",
+          "services.sofa.alt":"Чистка дивана","services.sofa.title":"Чистка дивана",
+          "services.sofa.desc":"Деликатный уход для тканевых и кожаных диванов.","services.sofa.price":"от 45 € за диван (+ 15 € выезд)",
+          "services.carpet.alt":"Чистка ковра","services.carpet.title":"Чистка ковра",
+          "services.carpet.desc":"Глубокая очистка & удаление запахов у вас дома.","services.carpet.price":"29 €/м² (+ 15 € выезд)",
+          "services.auto.alt":"Чистка салона авто","services.auto.title":"Чистка салона авто",
+          "services.auto.desc":"Тщательная уборка, уход за обивкой & свежий аромат.","services.auto.price":"от 59 € за авто (+ 15 € выезд)",
+          "services.chair.alt":"Чистка обивки стула","services.chair.title":"Чистка обивки стула",
+          "services.chair.desc":"Чистка отдельных или офисных стульев.","services.chair.price":"от 12 € за стул (+ 15 € выезд)",
+          "contact.header":"Отправить запрос","contact.field.service":"Тип запроса",
+          "contact.service.placeholder":"-- Пожалуйста, выберите --","contact.field.email":"Ваш email",
+          "contact.email.placeholder":"Введите ваш email","contact.field.message":"Сообщение",
+          "contact.message.placeholder":"Ваше сообщение…","contact.button":"Отправить",
+          "contact.email.label":"Email:","contact.phone.label":"Телефон:",
+          "footer.top":"Наверх"
+        },
+        tr: {
+          title:"Fav-AutoClean | Profesyonel Temizlik",
+          "nav.services":"Hizmetler","nav.contact":"İletişim",
+          "hero.title":"Fav-AutoClean","hero.subtitle":"Kanepe, halı, araç & sandalye için profesyonel temizlik",
+          "services.sofa.alt":"Kanepe temizleme","services.sofa.title":"Kanepe Temizleme",
+          "services.sofa.desc":"Döşeme & deri kanepeler için nazik bakım.","services.sofa.price":"45 €'dan başlayan fiyatlarla (+ 15 € yol ücreti)",
+          "services.carpet.alt":"Halı temizleme","services.carpet.title":"Halı Temizleme",
+          "services.carpet.desc":"Derin temizlik & koku giderme evinizde.","services.carpet.price":"29 €/m² (+ 15 € yol ücreti)",
+          "services.auto.alt":"Araç içi temizlik","services.auto.title":"Araç İçi Temizlik",
+          "services.auto.desc":"Süpürme, döşeme bakımı & taze koku.","services.auto.price":"59 €'dan başlayan fiyatlarla (+ 15 € yol ücreti)",
+          "services.chair.alt":"Sandalye temizliği","services.chair.title":"Sandalye Temizliği",
+          "services.chair.desc":"Bireysel veya ofis sandalyeleri için temizlik.","services.chair.price":"12 €'dan başlayan fiyatlarla (+ 15 € yol ücreti)",
+          "contact.header":"Talep gönder","contact.field.service":"Talep Türü",
+          "contact.service.placeholder":"-- Lütfen seçin --","contact.field.email":"E-posta adresiniz",
+          "contact.email.placeholder":"E-postanızı girin","contact.field.message":"Mesaj",
+          "contact.message.placeholder":"Mesajınız…","contact.button":"Gönder",
+          "contact.email.label":"E-posta:","contact.phone.label":"Telefon:",
+          "footer.top":"Yukarı"
+        },
+        hrv: {
+          title:"Fav-AutoClean | Profesionalno čišćenje",
+          "nav.services":"Usluge","nav.contact":"Kontakt",
+          "hero.title":"Fav-AutoClean","hero.subtitle":"Profesionalno čišćenje sofa, tepiha, auta i stolica",
+          "services.sofa.alt":"Čišćenje sofe","services.sofa.title":"Čišćenje sofe",
+          "services.sofa.desc":"Pažljivo čišćenje tkanih i kožnih sofa.","services.sofa.price":"od 45 € po sofi (+ 15 € prijevoz)",
+          "services.carpet.alt":"Čišćenje tepiha","services.carpet.title":"Čišćenje tepiha",
+          "services.carpet.desc":"Dubinsko čišćenje & uklanjanje mirisa kod vas.","services.carpet.price":"29 €/m² (+ 15 € prijevoz)",
+          "services.auto.alt":"Čišćenje unutrašnjosti auta","services.auto.title":"Čišćenje auta",
+          "services.auto.desc":"Usisavanje, njega tapeciranja & svjež miris.","services.auto.price":"od 59 € po vozilu (+ 15 € prijevoz)",
+          "services.chair.alt":"Čišćenje stolca","services.chair.title":"Čišćenje stolca",
+          "services.chair.desc":"Ciljano čišćenje stolaca.","services.chair.price":"od 12 € po stolcu (+ 15 € prijevoz)",
+          "contact.header":"Pošaljite upit","contact.field.service":"Vrsta upita",
+          "contact.service.placeholder":"-- Molimo odaberite --","contact.field.email":"Vaš e-mail",
+          "contact.email.placeholder":"Unesite e-mail","contact.field.message":"Poruka",
+          "contact.message.placeholder":"Vaša poruka…","contact.button":"Pošalji",
+          "contact.email.label":"E-mail:","contact.phone.label":"Telefon:",
+          "footer.top":"Na vrh"
+        },
+        es: {
+          title:"Fav-AutoClean | Limpieza Profesional",
+          "nav.services":"Servicios","nav.contact":"Contacto",
+          "hero.title":"Fav-AutoClean","hero.subtitle":"Limpieza profesional de sofás, alfombras, autos y sillas",
+          "services.sofa.alt":"Limpieza sofá","services.sofa.title":"Limpieza sofá",
+          "services.sofa.desc":"Cuidado delicado para sofás tapizados y de cuero.","services.sofa.price":"desde 45 € por sofá (+ 15 € desplazamiento)",
+          "services.carpet.alt":"Limpieza alfombra","services.carpet.title":"Limpieza alfombra",
+          "services.carpet.desc":"Limpieza profunda & eliminación de olores a domicilio.","services.carpet.price":"29 €/m² (+ 15 € desplazamiento)",
+          "services.auto.alt":"Limpieza interior coche","services.auto.title":"Limpieza interior coche",
+          "services.auto.desc":"Aspirado, cuidado tapicería & aroma fresco.","services.auto.price":"desde 59 € por vehículo (+ 15 € desplazamiento)",
+          "services.chair.alt":"Limpieza sillita","services.chair.title":"Limpieza silla",
+          "services.chair.desc":"Limpieza dirigida para sillas.","services.chair.price":"desde 12 € por silla (+ 15 € desplazamiento)",
+          "contact.header":"Envía tu consulta","contact.field.service":"Tipo de consulta",
+          "contact.service.placeholder":"-- Por favor elija --","contact.field.email":"Tu correo",
+          "contact.email.placeholder":"Introduce tu correo","contact.field.message":"Mensaje",
+          "contact.message.placeholder":"Tu mensaje…","contact.button":"Enviar",
+          "contact.email.label":"Correo:","contact.phone.label":"Teléfono:",
+          "footer.top":"Arriba"
+        },
+        it: {
+          title:"Fav-AutoClean | Pulizia Professionale",
+          "nav.services":"Servizi","nav.contact":"Contatto",
+          "hero.title":"Fav-AutoClean","hero.subtitle":"Pulizia professionale di divani, tappeti, auto e sedie",
+          "services.sofa.alt":"Pulizia divano","services.sofa.title":"Pulizia divano",
+          "services.sofa.desc":"Cura delicata per divani in tessuto e pelle.","services.sofa.price":"da 45 € a divano (+ 15 € trasferta)",
+          "services.carpet.alt":"Pulizia tappeto","services.carpet.title":"Pulizia tappeto",
+          "services.carpet.desc":"Pulizia profonda & rimozione odori a domicilio.","services.carpet.price":"29 €/m² (+ 15 € trasferta)",
+          "services.auto.alt":"Pulizia interno auto","services.auto.title":"Pulizia auto",
+          "services.auto.desc":"Aspirazione, cura tappezzeria & profumo fresco.","services.auto.price":"da 59 € per veicolo (+ 15 € trasferta)",
+          "services.chair.alt":"Pulizia sedia","services.chair.title":"Pulizia sedia",
+          "services.chair.desc":"Pulizia mirata per sedie.","services.chair.price":"da 12 € per sedia (+ 15 € trasferta)",
+          "contact.header":"Invia richiesta","contact.field.service":"Tipo di richiesta",
+          "contact.service.placeholder":"-- Si prega di scegliere --","contact.field.email":"La tua e-mail",
+          "contact.email.placeholder":"Inserisci e-mail","contact.field.message":"Messaggio",
+          "contact.message.placeholder":"Il tuo messaggio…","contact.button":"Invia",
+          "contact.email.label":"E-mail:","contact.phone.label":"Telefono:",
+          "footer.top":"Torna su"
+        },
+        sq: {
+          title:"Fav-AutoClean | Pastrim Profesional",
+          "nav.services":"Shërbimet","nav.contact":"Kontakti",
+          "hero.title":"Fav-AutoClean","hero.subtitle":"Pastrim profesional për divanë, qilima, makina & karrige",
+          "services.sofa.alt":"Pastrim divani","services.sofa.title":"Pastrim divani",
+          "services.sofa.desc":"Kujdes i butë për divanë tapicieruara dhe prej lëkure.","services.sofa.price":"nga 45 € për divan (+ 15 € transport)",
+          "services.carpet.alt":"Pastrim qilimi","services.carpet.title":"Pastrim qilimi",
+          "services.carpet.desc":"Pastrim i thellë & heqje aromash në vendin tuaj.","services.carpet.price":"29 €/m² (+ 15 € transport)",
+          "services.auto.alt":"Pastrim brenda makinës","services.auto.title":"Pastrim makine",
+          "services.auto.desc":"Supsdhje, kujdes tapicerie & aromë e freskët.","services.auto.price":"nga 59 € per makinë (+ 15 € transport)",
+          "services.chair.alt":"Pastrim karrige","services.chair.title":"Pastrim karrige",
+          "services.chair.desc":"Pastrim i synuar për karrige.","services.chair.price":"nga 12 € per karrige (+ 15 € transport)",
+          "contact.header":"Dërgo kërkesën","contact.field.service":"Lloji i kërkesës",
+          "contact.service.placeholder":"-- Zgjidhni --","contact.field.email":"Email juaj",
+          "contact.email.placeholder":"Vendosni email","contact.field.message":"Mesazh",
+          "contact.message.placeholder":"Mesazhi juaj…","contact.button":"Dërgo",
+          "contact.email.label":"Email:","contact.phone.label":"Telefoni:",
+          "footer.top":"Lart"
+        },
+        fr: {
+          title:"Fav-AutoClean | Nettoyage Professionnel",
+          "nav.services":"Prestations","nav.contact":"Contact",
+          "hero.title":"Fav-AutoClean","hero.subtitle":"Nettoyage pro de canapés, tapis, voitures & chaises",
+          "services.sofa.alt":"Nettoyage canapé","services.sofa.title":"Nettoyage canapé",
+          "services.sofa.desc":"Entretien délicat pour canapés tissu & cuir.","services.sofa.price":"à partir de 45 € par canapé (+ 15 € déplacement)",
+          "services.carpet.alt":"Nettoyage tapis","services.carpet.title":"Nettoyage tapis",
+          "services.carpet.desc":"Nettoyage profond & élimination odeurs chez vous.","services.carpet.price":"29 €/m² (+ 15 € déplacement)",
+          "services.auto.alt":"Nettoyage intérieur auto","services.auto.title":"Nettoyage auto",
+          "services.auto.desc":"Aspirateur, soin tissu & parfum frais.","services.auto.price":"à partir de 59 € par véhicule (+ 15 € déplacement)",
+          "services.chair.alt":"Nettoyage chaise","services.chair.title":"Nettoyage chaise",
+          "services.chair.desc":"Nettoyage ciblé pour chaises.","services.chair.price":"à partir de 12 € par chaise (+ 15 € déplacement)",
+          "contact.header":"Envoyez votre demande","contact.field.service":"Type de demande",
+          "contact.service.placeholder":"-- Choisissez --","contact.field.email":"Votre e-mail",
+          "contact.email.placeholder":"Entrez votre e-mail","contact.field.message":"Message",
+          "contact.message.placeholder":"Votre message…","contact.button":"Envoyer",
+          "contact.email.label":"E-mail:","contact.phone.label":"Téléphone:",
+          "footer.top":"Haut de page"
         }
       };
 
-      // 3) Falls Sprache != "de", Übersetzen
-      if (lang !== 'de' && translations[lang]) {
-        // Texte
-        document.querySelectorAll('[data-i18n]').forEach(el => {
-          const key = el.getAttribute('data-i18n');
-          if (translations[lang][key]) el.textContent = translations[lang][key];
+      if (dict[lang]) {
+        // Texte ersetzen
+        document.querySelectorAll('[data-i18n]').forEach(el=>{
+          const key=el.getAttribute('data-i18n');
+          if(dict[lang][key]) el.textContent=dict[lang][key];
         });
-        // Alt-Attribute für Bilder
-        document.querySelectorAll('[data-i18n-img-alt]').forEach(img => {
-          const key = img.getAttribute('data-i18n-img-alt');
-          if (translations[lang][key]) img.alt = translations[lang][key];
+        // Alt-Attribute
+        document.querySelectorAll('[data-i18n-img-alt]').forEach(img=>{
+          const key=img.getAttribute('data-i18n-img-alt');
+          if(dict[lang][key]) img.alt=dict[lang][key];
         });
         // Placeholder
-        document.querySelectorAll('[data-i18n-placeholder]').forEach(inp => {
-          const key = inp.getAttribute('data-i18n-placeholder');
-          if (translations[lang][key]) inp.placeholder = translations[lang][key];
+        document.querySelectorAll('[data-i18n-placeholder]').forEach(inp=>{
+          const key=inp.getAttribute('data-i18n-placeholder');
+          if(dict[lang][key]) inp.placeholder=dict[lang][key];
         });
-        // Dokument-Titel
-        const tkey = document.querySelector('title').getAttribute('data-i18n');
-        if (translations[lang][tkey]) document.title = translations[lang][tkey];
+        // Title-Tag
+        const tkey=document.querySelector('title').getAttribute('data-i18n');
+        if(dict[lang][tkey]) document.title=dict[lang][tkey];
       }
     });
   </script>
