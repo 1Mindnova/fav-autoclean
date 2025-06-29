@@ -2,104 +2,164 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <meta name="description" content="Fav-AutoClean – Profi-Reinigung für Sofa, Teppich, Auto & Stuhl. Frisch, schnell & zuverlässig.">
+  <meta name="description" content="Fav-AutoClean – Profi-Reinigung für Sofa, Teppich, Auto & Stuhl.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fav-AutoClean | Profi-Reinigung</title>
+  <title data-i18n="title">Fav-AutoClean | Profi-Reinigung</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- NAVIGATION -->
   <nav class="nav">
     <img src="img/logo.jpg" alt="Fav-AutoClean Logo" class="nav-logo">
 
     <div class="nav-links">
-      <a href="#services">Leistungen</a>
-      <a href="#kontakt">Kontakt</a>
+      <a href="#services" data-i18n="nav.services">Leistungen</a>
+      <a href="#kontakt" data-i18n="nav.contact">Kontakt</a>
     </div>
 
     <div class="lang-switcher">
-      <a href="?lang=de"><span class="emoji">🇩🇪</span><span class="code">DE</span></a>
-      <a href="?lang=en"><span class="emoji">🇬🇧</span><span class="code">EN</span></a>
-      <a href="?lang=ro"><span class="emoji">🇷🇴</span><span class="code">RO</span></a>
-      <a href="?lang=ru"><span class="emoji">🇷🇺</span><span class="code">RU</span></a>
-      <a href="?lang=tr"><span class="emoji">🇹🇷</span><span class="code">TR</span></a>
-      <a href="?lang=hr"><span class="emoji">🇭🇷</span><span class="code">HR</span></a>
-      <a href="?lang=es"><span class="emoji">🇪🇸</span><span class="code">ES</span></a>
-      <a href="?lang=it"><span class="emoji">🇮🇹</span><span class="code">ITA</span></a>
-      <a href="?lang=sq"><span class="emoji">🇦🇱</span><span class="code">ALB</span></a>
-      <a href="?lang=fr"><span class="emoji">🇫🇷</span><span class="code">FR</span></a>
+      <a href="#" data-lang="de">DE</a>
+      <a href="#" data-lang="en">EN</a>
+      <a href="#" data-lang="ro">RO</a>
+      <a href="#" data-lang="ru">RU</a>
+      <a href="#" data-lang="tr">TR</a>
+      <a href="#" data-lang="hr">HR</a>
+      <a href="#" data-lang="es">ES</a>
+      <a href="#" data-lang="it">IT</a>
+      <a href="#" data-lang="sq">AL</a>
+      <a href="#" data-lang="fr">FR</a>
     </div>
   </nav>
 
-  <!-- HERO -->
   <header class="hero">
     <div class="badge">
-      <h1>Fav-AutoClean</h1>
-      <p>Deine Profi-Reinigung für Sofa, Teppich, Auto & Stuhl</p>
+      <h1 data-i18n="hero.title">Fav-AutoClean</h1>
+      <p data-i18n="hero.subtitle">Deine Profi-Reinigung für Sofa, Teppich, Auto &amp; Stuhl</p>
     </div>
   </header>
 
-  <!-- SERVICES -->
   <section id="services" class="services-grid">
     <div class="service-card">
-      <img src="img/sofa.jpg" alt="Sofareinigung">
-      <h2>Sofareinigung</h2>
-      <p>Schonende, materialgerechte Pflege für Polster- & Ledersofas.</p>
-      <div class="price">ab 45 € pro Sofa (zzgl. 15 € Anfahrt)</div>
+      <img src="img/sofa.jpg" alt="" data-i18n-img-alt="services.sofa.alt">
+      <h2 data-i18n="services.sofa.title">Sofareinigung</h2>
+      <p data-i18n="services.sofa.desc">Schonende, materialgerechte Pflege für Polster- &amp; Ledersofas.</p>
+      <div class="price" data-i18n="services.sofa.price">ab 45 € pro Sofa (zzgl. 15 € Anfahrt)</div>
     </div>
     <div class="service-card">
-      <img src="img/teppich.jpg" alt="Teppichreinigung">
-      <h2>Teppichreinigung</h2>
-      <p>Intensive Tiefenreinigung & Geruchsentfernung direkt bei dir.</p>
-      <div class="price">29 €/m² (zzgl. 15 € Anfahrt)</div>
+      <img src="img/teppich.jpg" alt="" data-i18n-img-alt="services.carpet.alt">
+      <h2 data-i18n="services.carpet.title">Teppichreinigung</h2>
+      <p data-i18n="services.carpet.desc">Intensive Tiefenreinigung &amp; Geruchsentfernung direkt bei dir.</p>
+      <div class="price" data-i18n="services.carpet.price">29 €/m² (zzgl. 15 € Anfahrt)</div>
     </div>
     <div class="service-card">
-      <img src="img/auto.jpg" alt="Autoinnenreinigung">
-      <h2>Autoinnenreinigung</h2>
-      <p>Gründliches Saugen, Polsterpflege & Frischduft-Finish.</p>
-      <div class="price">ab 59 € pro Fahrzeug (zzgl. 15 € Anfahrt)</div>
+      <img src="img/auto.jpg" alt="" data-i18n-img-alt="services.auto.alt">
+      <h2 data-i18n="services.auto.title">Autoinnenreinigung</h2>
+      <p data-i18n="services.auto.desc">Gründliches Saugen, Polsterpflege &amp; Frischduft-Finish.</p>
+      <div class="price" data-i18n="services.auto.price">ab 59 € pro Fahrzeug (zzgl. 15 € Anfahrt)</div>
     </div>
     <div class="service-card">
-      <img src="img/stuhl.jpg" alt="Stuhlpolsterreinigung">
-      <h2>Stuhlpolster­reinigung</h2>
-      <p>Zielgerichtete Reinigung für Einzel- oder Bürostühle.</p>
-      <div class="price">ab 12 € pro Stuhl (zzgl. 15 € Anfahrt)</div>
+      <img src="img/stuhl.jpg" alt="" data-i18n-img-alt="services.chair.alt">
+      <h2 data-i18n="services.chair.title">Stuhlpolster­reinigung</h2>
+      <p data-i18n="services.chair.desc">Zielgerichtete Reinigung für Einzel- oder Bürostühle.</p>
+      <div class="price" data-i18n="services.chair.price">ab 12 € pro Stuhl (zzgl. 15 € Anfahrt)</div>
     </div>
   </section>
 
-  <!-- KONTAKT -->
   <section id="kontakt" class="form-section">
-    <h2>Jetzt Anfrage senden</h2>
+    <h2 data-i18n="contact.header">Jetzt Anfrage senden</h2>
     <form class="form" action="https://formspree.io/f/xdkzyqzv" method="POST">
-      <label>Art der Anfrage
+      <label>
+        <span data-i18n="contact.field.service">Art der Anfrage</span>
         <select name="service" required>
-          <option value="">-- Bitte wählen --</option>
-          <option>Sofareinigung</option>
-          <option>Teppichreinigung</option>
-          <option>Autoinnenreinigung</option>
-          <option>Stuhlpolster­reinigung</option>
+          <option value="" data-i18n="contact.service.placeholder">-- Bitte wählen --</option>
+          <option data-i18n="services.sofa.title">Sofareinigung</option>
+          <option data-i18n="services.carpet.title">Teppichreinigung</option>
+          <option data-i18n="services.auto.title">Autoinnenreinigung</option>
+          <option data-i18n="services.chair.title">Stuhlpolster­reinigung</option>
         </select>
       </label>
-      <label>Deine E-Mail
-        <input type="email" name="email" placeholder="E-Mail hier eingeben" required>
+      <label>
+        <span data-i18n="contact.field.email">Deine E-Mail</span>
+        <input type="email" name="email" placeholder="" data-i18n-placeholder="contact.email.placeholder" required>
       </label>
-      <label>Nachricht
-        <textarea name="message" rows="4" placeholder="Deine Nachricht…"></textarea>
+      <label>
+        <span data-i18n="contact.field.message">Nachricht</span>
+        <textarea name="message" rows="4" placeholder="" data-i18n-placeholder="contact.message.placeholder"></textarea>
       </label>
-      <button type="submit">Absenden</button>
+      <button type="submit" data-i18n="contact.button">Absenden</button>
     </form>
     <div class="contact-info">
-      <p><strong>E-Mail:</strong> fevronia63@gmail.com</p>
-      <p><strong>Telefon:</strong> +49 1590 6655267</p>
+      <p><strong data-i18n="contact.email.label">E-Mail:</strong> fevronia63@gmail.com</p>
+      <p><strong data-i18n="contact.phone.label">Telefon:</strong> +49 1590 6655267</p>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
-    <p>&copy; 2025 Fav-AutoClean • <a href="#services">Nach oben</a></p>
+    <p>&copy; 2025 Fav-AutoClean • <a href="#services" data-i18n="footer.top">Nach oben</a></p>
   </footer>
+
+  <script>
+    const translations = {
+      en: {
+        title: "Fav-AutoClean | Professional Cleaning",
+        "nav.services": "Services",
+        "nav.contact": "Contact",
+        "hero.title": "Fav-AutoClean",
+        "hero.subtitle": "Your pro cleaning for sofa, carpet, car & chair",
+        "services.sofa.alt": "Sofa cleaning",
+        "services.sofa.title": "Sofa Cleaning",
+        "services.sofa.desc": "Gentle, material-appropriate care for upholstered & leather sofas.",
+        "services.sofa.price": "from €45 per sofa (+ €15 travel)",
+        "services.carpet.alt": "Carpet cleaning",
+        "services.carpet.title": "Carpet Cleaning",
+        "services.carpet.desc": "Intensive deep cleaning & odor removal at your place.",
+        "services.carpet.price": "€29 / m² (+ €15 travel)",
+        "services.auto.alt": "Car interior cleaning",
+        "services.auto.title": "Car Interior Cleaning",
+        "services.auto.desc": "Thorough vacuuming, upholstery care & fresh scent finish.",
+        "services.auto.price": "from €59 per vehicle (+ €15 travel)",
+        "services.chair.alt": "Chair upholstery cleaning",
+        "services.chair.title": "Chair Upholstery Cleaning",
+        "services.chair.desc": "Targeted cleaning for individual or office chairs.",
+        "services.chair.price": "from €12 per chair (+ €15 travel)",
+        "contact.header": "Send your inquiry now",
+        "contact.field.service": "Type of inquiry",
+        "contact.service.placeholder": "-- Please choose --",
+        "contact.field.email": "Your email",
+        "contact.email.placeholder": "Enter your email",
+        "contact.field.message": "Message",
+        "contact.message.placeholder": "Your message…",
+        "contact.button": "Submit",
+        "contact.email.label": "Email:",
+        "contact.phone.label": "Phone:",
+        "footer.top": "Back to top"
+      }
+      // weitere Sprachen hier ergänzen…
+    };
+
+    document.querySelectorAll('.lang-switcher a').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const lang = link.getAttribute('data-lang');
+        if (!translations[lang]) return;
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+          const key = el.getAttribute('data-i18n');
+          if (translations[lang][key]) el.textContent = translations[lang][key];
+        });
+        document.querySelectorAll('[data-i18n-img-alt]').forEach(img => {
+          const key = img.getAttribute('data-i18n-img-alt');
+          if (translations[lang][key]) img.alt = translations[lang][key];
+        });
+        document.querySelectorAll('[data-i18n-placeholder]').forEach(inp => {
+          const key = inp.getAttribute('data-i18n-placeholder');
+          if (translations[lang][key]) inp.placeholder = translations[lang][key];
+        });
+        const t = document.querySelector('title').getAttribute('data-i18n');
+        if (translations[lang][t]) document.title = translations[lang][t];
+      });
+    });
+  </script>
 
 </body>
 </html>
