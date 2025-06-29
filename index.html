@@ -12,12 +12,10 @@
 
   <nav class="nav">
     <img src="img/logo.jpg" alt="Fav-AutoClean Logo" class="nav-logo">
-
     <div class="nav-links">
       <a href="#services" data-i18n="nav.services">Leistungen</a>
       <a href="#kontakt" data-i18n="nav.contact">Kontakt</a>
     </div>
-
     <div class="lang-switcher">
       <a href="#" data-lang="de">DE</a>
       <a href="#" data-lang="en">EN</a>
@@ -135,13 +133,11 @@
         "contact.phone.label": "Phone:",
         "footer.top": "Back to top"
       }
-      // weitere Sprachen hier ergänzen…
     };
-
     document.querySelectorAll('.lang-switcher a').forEach(link => {
       link.addEventListener('click', e => {
         e.preventDefault();
-        const lang = link.getAttribute('data-lang');
+        const lang = link.dataset.lang;
         if (!translations[lang]) return;
         document.querySelectorAll('[data-i18n]').forEach(el => {
           const key = el.getAttribute('data-i18n');
