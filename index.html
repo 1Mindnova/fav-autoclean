@@ -2,82 +2,82 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Fav-AutoClean | Professionelle Reinigung</title>
+  <meta name="description" content="Fav-AutoClean – Profi-Reinigung für Sofa, Teppich, Auto & Stuhl. Frisch, schnell & zuverlässig direkt bei dir.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fav-AutoClean | Profi-Reinigung</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <header>
-    <h1>Fav-AutoClean</h1>
-    <p>Frisch, schnell & zuverlässig</p>
-    <nav>
-      <a href="#sofa">Sofareinigung</a>
-      <a href="#teppich">Teppichreinigung</a>
-      <a href="#auto">Autoinnenreinigung</a>
-      <a href="#stuhl">Stuhlpolster­reinigung</a>
-      <a href="#kontakt">Kontakt</a>
-    </nav>
+  <nav class="nav">
+    <img src="img/logo.jpg" alt="Fav-AutoClean Logo" class="nav-logo">
+    <a href="#services">Leistungen</a>
+    <a href="#kontakt">Kontakt</a>
+  </nav>
+
+  <header class="header">
+    <div class="header-content">
+      <h1>Fav-AutoClean</h1>
+      <p>Deine Profi-Reinigung für Sofa, Teppich, Auto & Stuhl</p>
+    </div>
   </header>
 
-  <main>
-    <section id="sofa" class="service">
-      <h2>Sofareinigung</h2>
+  <section id="services" class="services-grid">
+    <div class="service-card">
       <img src="img/sofa.jpg" alt="Sofareinigung">
-      <p>Schonende, materialgerechte Reinigung für Polster- & Ledersofas.<br>
-         <strong>ab 45 € pro Sofa</strong> (zzgl. 15 € Anfahrt)</p>
-    </section>
-
-    <section id="teppich" class="service">
-      <h2>Teppichreinigung</h2>
+      <h2>Sofareinigung</h2>
+      <p>Schonende, materialgerechte Pflege für Polster- & Ledersofas.</p>
+      <div class="price">ab 45 € pro Sofa (zzgl. 15 € Anfahrt)</div>
+    </div>
+    <div class="service-card">
       <img src="img/teppich.jpg" alt="Teppichreinigung">
-      <p>Intensive Tiefenreinigung & Geruchsentfernung direkt bei dir.<br>
-         <strong>29 € / m²</strong> (zzgl. 15 € Anfahrt)</p>
-    </section>
-
-    <section id="auto" class="service">
-      <h2>Autoinnenreinigung</h2>
+      <h2>Teppichreinigung</h2>
+      <p>Intensive Tiefenreinigung & Geruchsentfernung direkt bei dir.</p>
+      <div class="price">29 € /m² (zzgl. 15 € Anfahrt)</div>
+    </div>
+    <div class="service-card">
       <img src="img/auto.jpg" alt="Autoinnenreinigung">
-      <p>Gründliche Innenreinigung: Saugen, Polsterpflege & Frischduft.<br>
-         <strong>ab 59 € pro Fahrzeug</strong> (zzgl. 15 € Anfahrt)</p>
-    </section>
-
-    <section id="stuhl" class="service">
+      <h2>Autoinnenreinigung</h2>
+      <p>Gründliches Saugen, Polsterpflege & Frischduft-Finish.</p>
+      <div class="price">ab 59 € pro Fahrzeug (zzgl. 15 € Anfahrt)</div>
+    </div>
+    <div class="service-card">
+      <img src="img/stuhl.jpg" alt="Stuhlpolsterreinigung">
       <h2>Stuhlpolster­reinigung</h2>
-      <img src="img/stuhl.jpg" alt="Stuhlpolster­reinigung">
-      <p>Gezielte Reinigung einzelner Stühle – ideal für Büro & Esszimmer.<br>
-         <strong>ab 12 € pro Stuhl</strong> (zzgl. 15 € Anfahrt)</p>
-    </section>
+      <p>Zielgerichtete Reinigung für Einzel- oder Bürostühle.</p>
+      <div class="price">ab 12 € pro Stuhl (zzgl. 15 € Anfahrt)</div>
+    </div>
+  </section>
 
-    <section id="kontakt" class="service form-section">
-      <h2>Jetzt Anfrage senden</h2>
-      <form action="https://formspree.io/f/xdkzyqzv" method="POST">
-        <label>
-          Art der Anfrage
-          <select name="service" required>
-            <option value="">-- Bitte wählen --</option>
-            <option value="Sofareinigung">Sofareinigung</option>
-            <option value="Teppichreinigung">Teppichreinigung</option>
-            <option value="Autoinnenreinigung">Autoinnenreinigung</option>
-            <option value="Stuhlpolster­reinigung">Stuhlpolster­reinigung</option>
-            <option value="Anderes">Anderes</option>
-          </select>
-        </label>
-        <label>
-          Deine E-Mail
-          <input type="email" name="email" placeholder="E-Mail hier eingeben" required>
-        </label>
-        <label>
-          Nachricht
-          <textarea name="message" placeholder="Deine Nachricht…" rows="5"></textarea>
-        </label>
-        <button type="submit">Absenden</button>
-      </form>
-    </section>
-  </main>
+  <section id="kontakt" class="form-section">
+    <h2>Jetzt Anfrage senden</h2>
+    <form class="form" action="https://formspree.io/f/xdkzyqzv" method="POST">
+      <label>
+        Art der Anfrage
+        <select name="service" required>
+          <option value="">-- Bitte wählen --</option>
+          <option value="Sofareinigung">Sofareinigung</option>
+          <option value="Teppichreinigung">Teppichreinigung</option>
+          <option value="Autoinnenreinigung">Autoinnenreinigung</option>
+          <option value="Stuhlpolsterreinigung">Stuhlpolsterreinigung</option>
+          <option value="Anderes">Anderes</option>
+        </select>
+      </label>
+      <label>
+        Deine E-Mail
+        <input type="email" name="email" placeholder="E-Mail hier eingeben" required>
+      </label>
+      <label>
+        Nachricht
+        <textarea name="message" placeholder="Deine Nachricht…" rows="5"></textarea>
+      </label>
+      <button type="submit">Absenden</button>
+    </form>
+  </section>
 
   <footer>
-    <p>&copy; 2025 Fav-AutoClean</p>
+    &copy; 2025 Fav-AutoClean • <a href="#services">Nach oben</a>
   </footer>
 
 </body>
