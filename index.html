@@ -24,21 +24,21 @@
     <section id="sofa" class="service">
       <h2>Sofareinigung</h2>
       <img src="img/sofa.jpg" alt="Sofareinigung">
-      <p>Schonende, material­gerechte Reinigung für Polster- & Leder­sofas.<br>
+      <p>Schonende, materialgerechte Reinigung für Polster- & Ledersofas.<br>
          <strong>ab 45 € pro Sofa</strong> (zzgl. 15 € Anfahrt)</p>
     </section>
 
     <section id="teppich" class="service">
       <h2>Teppichreinigung</h2>
       <img src="img/teppich.jpg" alt="Teppichreinigung">
-      <p>Intensive Tiefen­reinigung & Geruchs­entfernung direkt bei dir.<br>
+      <p>Intensive Tiefenreinigung & Geruchsentfernung direkt bei dir.<br>
          <strong>29 € / m²</strong> (zzgl. 15 € Anfahrt)</p>
     </section>
 
     <section id="auto" class="service">
       <h2>Autoinnenreinigung</h2>
       <img src="img/auto.jpg" alt="Autoinnenreinigung">
-      <p>Gründliche Innen­reinigung: Saugen, Polsterpflege & Frischduft.<br>
+      <p>Gründliche Innenreinigung: Saugen, Polsterpflege & Frischduft.<br>
          <strong>ab 59 € pro Fahrzeug</strong> (zzgl. 15 € Anfahrt)</p>
     </section>
 
@@ -68,79 +68,17 @@
           <input type="email" name="email" placeholder="E-Mail hier eingeben" required>
         </label>
         <label>
-          N
+          Nachricht
+          <textarea name="message" placeholder="Deine Nachricht…" rows="5"></textarea>
+        </label>
+        <button type="submit">Absenden</button>
+      </form>
+    </section>
+  </main>
 
+  <footer>
+    <p>&copy; 2025 Fav-AutoClean</p>
+  </footer>
 
-cat > css/style.css << 'EOF'
-/* Reset & Basis */
-* { margin:0; padding:0; box-sizing:border-box }
-body {
-  font-family: sans-serif;
-  line-height: 1.6;
-  color: #1e4128;
-  background: #f5efe4;
-  padding: 0 1rem;
-}
-img { max-width:100%; height:auto; }
-
-/* Header */
-header {
-  text-align: center;
-  padding: 2rem 0;
-  background: #1e4128;
-  color: #f5efe4;
-}
-header h1 { font-size: 2.5rem; }
-header p { margin-top: 0.5rem; }
-nav a {
-  margin: 0 0.5rem;
-  color: #f5efe4;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-/* Service-Abschnitte */
-.service {
-  max-width: 800px;
-  margin: 3rem auto;
-  text-align: center;
-}
-.service h2 { font-size: 1.8rem; margin-bottom: 1rem; }
-.service p { margin-top: 0.5rem; }
-
-/* Formular */
-.form-section form {
-  display: grid;
-  gap: 1rem;
-  max-width: 500px;
-  margin: 0 auto;
-}
-.form-section label {
-  display: flex;
-  flex-direction: column;
-  font-weight: bold;
-}
-.form-section input,
-.form-section select,
-.form-section textarea {
-  padding: 0.5rem;
-  border: 2px solid #a08b53;
-  border-radius: 0.5rem;
-  font-size: 1rem;
-}
-.form-section button {
-  background: #1e4128;
-  color: #f5efe4;
-  border: none;
-  padding: 0.75rem;
-  font-size: 1rem;
-  border-radius: 0.5rem;
-  cursor: pointer;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  margin: 2rem 0;
-  font-size: 0.9rem;
-}
+</body>
+</html>
