@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Reset & Basis */
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Open Sans',sans-serif;background:#f5f0e8;color:#333;line-height:1.6}
@@ -47,3 +48,62 @@ img{display:block;max-width:100%}
 /* Footer */
 footer{text-align:center;padding:1rem 0;background:#1e4128;color:#f5efe4}
 footer a{color:#a08b53;text-decoration:none}
+=======
+/* Überschriften im Hero */
+.badge h1 {
+  font-size:4.2rem;        /* größer */
+  letter-spacing:1px;      /* mehr Abstand */
+  line-height:1.1;
+}
+.badge p {
+  font-size:1.5rem;        /* etwas größer */
+  letter-spacing:0.5px;
+}
+
+/* Service-Karten */
+.service-card h2 {
+  font-size:1.8rem;        /* größer */
+  letter-spacing:0.5px;
+  margin:1.25rem 1rem .75rem;
+}
+.service-card p {
+  font-size:1.1rem;        /* lesbarer Fließtext */
+  line-height:1.5;
+  margin-bottom:1rem;
+}
+.service-card .price {
+  font-size:1.15rem;       /* Preisschrift leicht vergrößert */
+  font-weight:700;
+  margin-bottom:1.25rem;
+}
+
+/* Formular & Kontaktinfo */
+.form-section h2 {
+  font-size:2.4rem;        /* kräftigere Section-Headline */
+  letter-spacing:1px;
+}
+.form label {
+  font-size:1.05rem;       /* größere Feldbeschriftung */
+}
+.form input,
+.form select,
+.form textarea {
+  font-size:1rem;          /* klarere Eingabetexte */
+}
+.form button {
+  font-size:1.2rem;        /* prominenter Submit-Button */
+  letter-spacing:0.5px;
+}
+.contact-info p {
+  font-size:1.15rem;       /* deutlicher Kontakttext */
+  line-height:1.6;
+}
+
+/* Footer */
+footer {
+  font-size:1rem;          /* Footer leicht vergrößert */
+}
+footer a {
+  font-weight:600;
+}
+>>>>>>> bed28dc30fd0c98a5a47802411522962fe66f714
