@@ -19,17 +19,18 @@
       <a href="#kontakt" data-i18n="nav.contact">Kontakt</a>
     </div>
 
+    <!-- Sprach-Links legen lang-Parameter fest und reloaden Seite -->
     <div class="lang-switcher">
-      <a href="#" data-lang="de">DE</a>
-      <a href="#" data-lang="en">EN</a>
-      <a href="#" data-lang="ro">RO</a>
-      <a href="#" data-lang="ru">RU</a>
-      <a href="#" data-lang="tr">TR</a>
-      <a href="#" data-lang="hr">HR</a>
-      <a href="#" data-lang="es">ES</a>
-      <a href="#" data-lang="it">IT</a>
-      <a href="#" data-lang="sq">AL</a>
-      <a href="#" data-lang="fr">FR</a>
+      <a href="?lang=de">DE</a>
+      <a href="?lang=en">EN</a>
+      <a href="?lang=ro">RO</a>
+      <a href="?lang=ru">RU</a>
+      <a href="?lang=tr">TR</a>
+      <a href="?lang=hr">HR</a>
+      <a href="?lang=es">ES</a>
+      <a href="?lang=it">IT</a>
+      <a href="?lang=sq">AL</a>
+      <a href="?lang=fr">FR</a>
     </div>
   </nav>
 
@@ -85,11 +86,11 @@
       </label>
       <label>
         <span data-i18n="contact.field.email">Deine E-Mail</span>
-        <input type="email" name="email" placeholder="" data-i18n-placeholder="contact.email.placeholder" required>
+        <input type="email" name="email" data-i18n-placeholder="contact.email.placeholder" placeholder="" required>
       </label>
       <label>
         <span data-i18n="contact.field.message">Nachricht</span>
-        <textarea name="message" rows="4" placeholder="" data-i18n-placeholder="contact.message.placeholder"></textarea>
+        <textarea name="message" rows="4" data-i18n-placeholder="contact.message.placeholder" placeholder=""></textarea>
       </label>
       <button type="submit" data-i18n="contact.button">Absenden</button>
     </form>
@@ -107,69 +108,54 @@
   <!-- TRANSLATION SCRIPT -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
+      // 1) Sprache aus URL auslesen, default "de"
+      const params = new URLSearchParams(window.location.search);
+      const lang = params.get('lang') || 'de';
+
+      // 2) Übersetzungs-Wörterbuch
       const translations = {
         en: {
           title: "Fav-AutoClean | Professional Cleaning",
-          "nav.services": "Services",
-          "nav.contact": "Contact",
-          "hero.title": "Fav-AutoClean",
-          "hero.subtitle": "Your pro cleaning for sofa, carpet, car & chair",
-          "services.sofa.alt": "Sofa cleaning",
-          "services.sofa.title": "Sofa Cleaning",
+          "nav.services": "Services", "nav.contact": "Contact",
+          "hero.title": "Fav-AutoClean", "hero.subtitle": "Your pro cleaning for sofa, carpet, car & chair",
+          "services.sofa.alt": "Sofa cleaning", "services.sofa.title": "Sofa Cleaning",
           "services.sofa.desc": "Gentle, material-appropriate care for upholstered & leather sofas.",
           "services.sofa.price": "from €45 per sofa (+ €15 travel)",
-          "services.carpet.alt": "Carpet cleaning",
-          "services.carpet.title": "Carpet Cleaning",
-          "services.carpet.desc": "Intensive deep cleaning & odor removal at your place.",
-          "services.carpet.price": "€29 / m² (+ €15 travel)",
-          "services.auto.alt": "Car interior cleaning",
-          "services.auto.title": "Car Interior Cleaning",
-          "services.auto.desc": "Thorough vacuuming, upholstery care & fresh scent finish.",
-          "services.auto.price": "from €59 per vehicle (+ €15 travel)",
-          "services.chair.alt": "Chair upholstery cleaning",
-          "services.chair.title": "Chair Upholstery Cleaning",
-          "services.chair.desc": "Targeted cleaning for individual or office chairs.",
-          "services.chair.price": "from €12 per chair (+ €15 travel)",
-          "contact.header": "Send your inquiry now",
-          "contact.field.service": "Type of inquiry",
-          "contact.service.placeholder": "-- Please choose --",
-          "contact.field.email": "Your email",
-          "contact.email.placeholder": "Enter your email",
-          "contact.field.message": "Message",
-          "contact.message.placeholder": "Your message…",
-          "contact.button": "Submit",
-          "contact.email.label": "Email:",
-          "contact.phone.label": "Phone:",
-          "footer.top": "Back to top"
+          "services.carpet.alt":"Carpet cleaning","services.carpet.title":"Carpet Cleaning",
+          "services.carpet.desc":"Intensive deep cleaning & odor removal at your place.","services.carpet.price":"€29 / m² (+ €15 travel)",
+          "services.auto.alt":"Car interior cleaning","services.auto.title":"Car Interior Cleaning",
+          "services.auto.desc":"Thorough vacuuming, upholstery care & fresh scent finish.","services.auto.price":"from €59 per vehicle (+ €15 travel)",
+          "services.chair.alt":"Chair upholstery cleaning","services.chair.title":"Chair Upholstery Cleaning",
+          "services.chair.desc":"Targeted cleaning for individual or office chairs.","services.chair.price":"from €12 per chair (+ €15 travel)",
+          "contact.header":"Send your inquiry now","contact.field.service":"Type of inquiry",
+          "contact.service.placeholder":"-- Please choose --","contact.field.email":"Your email",
+          "contact.email.placeholder":"Enter your email","contact.field.message":"Message",
+          "contact.message.placeholder":"Your message…","contact.button":"Submit",
+          "contact.email.label":"Email:","contact.phone.label":"Phone:","footer.top":"Back to top"
         }
       };
 
-      document.querySelectorAll('.lang-switcher a').forEach(link => {
-        link.addEventListener('click', function(e) {
-          e.preventDefault();
-          const lang = this.getAttribute('data-lang');
-          const dict = translations[lang];
-          if (!dict) return;
-          // Texte
-          document.querySelectorAll('[data-i18n]').forEach(el => {
-            const key = el.getAttribute('data-i18n');
-            if (dict[key]) el.textContent = dict[key];
-          });
-          // Alt-Attribute
-          document.querySelectorAll('[data-i18n-img-alt]').forEach(img => {
-            const key = img.getAttribute('data-i18n-img-alt');
-            if (dict[key]) img.alt = dict[key];
-          });
-          // Placeholder
-          document.querySelectorAll('[data-i18n-placeholder]').forEach(inp => {
-            const key = inp.getAttribute('data-i18n-placeholder');
-            if (dict[key]) inp.placeholder = dict[key];
-          });
-          // Dokument-Titel
-          const tkey = document.querySelector('title').getAttribute('data-i18n');
-          if (dict[tkey]) document.title = dict[tkey];
+      // 3) Falls Sprache != "de", Übersetzen
+      if (lang !== 'de' && translations[lang]) {
+        // Texte
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+          const key = el.getAttribute('data-i18n');
+          if (translations[lang][key]) el.textContent = translations[lang][key];
         });
-      });
+        // Alt-Attribute für Bilder
+        document.querySelectorAll('[data-i18n-img-alt]').forEach(img => {
+          const key = img.getAttribute('data-i18n-img-alt');
+          if (translations[lang][key]) img.alt = translations[lang][key];
+        });
+        // Placeholder
+        document.querySelectorAll('[data-i18n-placeholder]').forEach(inp => {
+          const key = inp.getAttribute('data-i18n-placeholder');
+          if (translations[lang][key]) inp.placeholder = translations[lang][key];
+        });
+        // Dokument-Titel
+        const tkey = document.querySelector('title').getAttribute('data-i18n');
+        if (translations[lang][tkey]) document.title = translations[lang][tkey];
+      }
     });
   </script>
 
