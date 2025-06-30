@@ -12,6 +12,7 @@
   <meta name="description"
         content="Fav AutoClean – Professionelle Reinigung für Sofa, Teppich, Auto & Stuhl. Jetzt anfragen!">
 
+  <!-- Title mit Keyword -->
   <title>Fav AutoClean • Profi-Reinigung für Sofa, Teppich & Auto</title>
 
   <!-- Fonts & CSS -->
@@ -126,32 +127,18 @@
     </div>
   </section>
 
-  <!-- LocalBusiness Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Fav AutoClean",
-    "description": "Profi-Reinigung für Sofa, Teppich, Auto & Stuhl",
-    "telephone": "+49 1590 6655267",
-    "email": "fevronia63@gmail.com",
-    "url": "https://1mindnova.github.io/fav-autoclean/",
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "DE"
-    }
-  }
-  </script>
+  <footer class="footer">
+    <p>&copy; 2025 Fav AutoClean</p>
+  </footer>
 
-  <!-- Sprachwechsler-Logik (Beispiel EN) -->
   <script>
     const translations = {
       en: {
         "badge-title": "Fav AutoClean",
-        "badge-sub": "Your pro cleaning for sofa, carpet, car & chair",
-        "services-title": "Services",
+        "badge-sub": "Your professional cleaning for sofa, carpet, car & chair",
+        "section-title": "Services",
         "svc-sofa-title": "Sofa Cleaning",
-        "svc-sofa-desc": "Gentle, material-friendly care for upholstered & leather sofas.",
+        "svc-sofa-desc": "Gentle, material-appropriate care for upholstered & leather sofas.",
         "svc-sofa-price": "from €45 per sofa (+ €15 travel)",
         "svc-teppich-title": "Carpet Cleaning",
         "svc-teppich-desc": "Intensive deep cleaning & odor removal at your place.",
@@ -168,9 +155,8 @@
         "label-msg": "Message",
         "btn-submit": "Send"
       }
-      // Übersetzungen für ro, ru, tr, etc. nach gleichem Muster ergänzen…
+      // Weitere Sprachen nach gleichem Muster ergänzen…
     };
-
     function switchLang(lang) {
       if (!translations[lang]) return;
       Object.keys(translations[lang]).forEach(id => {
