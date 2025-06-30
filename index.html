@@ -3,19 +3,10 @@
 <head>
   <!-- Google-Verifizierung -->
   <meta name="google-site-verification" content="rHOKmbsaaZB3rt5_iv7IdIFzc8pCPgNJqlqQ1McG52c" />
-
-  <!-- Charset & Viewport -->
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Meta-Description -->
-  <meta name="description"
-        content="Fav AutoClean – Professionelle Reinigung für Sofa, Teppich, Auto & Stuhl. Jetzt anfragen!">
-
-  <!-- Title mit Keyword -->
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="description" content="Fav AutoClean – Professionelle Reinigung für Sofa, Teppich, Auto & Stuhl. Jetzt anfragen!">
   <title>Fav AutoClean • Profi-Reinigung für Sofa, Teppich & Auto</title>
-
-  <!-- Fonts & CSS -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -27,22 +18,11 @@
       <img src="img/logo.jpg" alt="Fav AutoClean Logo" class="nav-logo">
     </div>
     <div class="nav-center">
-      <a href="#services">Leistungen</a>
-      <a href="#kontakt">Kontakt</a>
+      <a href="#services" data-key="nav.services">Leistungen</a>
+      <a href="#kontakt" data-key="nav.contact">Kontakt</a>
     </div>
     <div class="nav-right">
-      <select class="lang-select">
-        <option value="de">Deutsch</option>
-        <option value="en">Englisch</option>
-        <option value="ro">Rumänisch</option>
-        <option value="ru">Russisch</option>
-        <option value="tr">Türkisch</option>
-        <option value="hrv">Kroatisch</option>
-        <option value="es">Spanisch</option>
-        <option value="it">Italienisch</option>
-        <option value="sq">Albanisch</option>
-        <option value="fr">Französisch</option>
-      </select>
+      <select id="langSelect" class="lang-select"></select>
     </div>
   </nav>
 
@@ -51,46 +31,46 @@
     <div class="hero-img-wrapper">
       <img src="img/couch.jpg" alt="Sauberes Sofa mit Katze" class="hero-img">
       <div class="badge">
-        <h1>Fav AutoClean – Deine Profi-Reinigung</h1>
-        <p>Deine Profi-Reinigung für Sofa, Teppich, Auto &amp; Stuhl</p>
+        <h1 data-key="hero.title">Fav AutoClean – Deine Profi-Reinigung</h1>
+        <p data-key="hero.subtitle">Deine Profi-Reinigung für Sofa, Teppich, Auto & Stuhl</p>
       </div>
     </div>
   </header>
 
   <!-- SERVICES -->
   <section id="services" class="services">
-    <h2 class="section-title">Leistungen</h2>
+    <h2 class="section-title" data-key="services.title">Leistungen</h2>
     <div class="services-grid">
       <div class="card">
-        <img src="img/sofa.jpg" alt="Profi-Gerät reinigt graues Stoffsofa">
+        <img src="img/sofa.jpg" alt="" >
         <div class="card-content">
-          <h3>Sofareinigung</h3>
-          <p>Schonende, materialgerechte Pflege für Polster- &amp; Ledersofas.</p>
-          <span class="price">ab 45 € pro Sofa (+ 15 € Anfahrt)</span>
+          <h3 data-key="services.sofa.title">Sofareinigung</h3>
+          <p data-key="services.sofa.text">Schonende, materialgerechte Pflege für Polster- & Ledersofas.</p>
+          <span class="price" data-key="services.sofa.price">ab 45 € pro Sofa (+ 15 € Anfahrt)</span>
         </div>
       </div>
       <div class="card">
-        <img src="img/teppich.jpg" alt="Maschine reinigt Teppich mit Schaum">
+        <img src="img/teppich.jpg" alt="" >
         <div class="card-content">
-          <h3>Teppichreinigung</h3>
-          <p>Intensive Tiefenreinigung &amp; Geruchsentfernung direkt bei dir.</p>
-          <span class="price">29 €/m² (+ 15 € Anfahrt)</span>
+          <h3 data-key="services.rug.title">Teppichreinigung</h3>
+          <p data-key="services.rug.text">Intensive Tiefenreinigung & Geruchsentfernung direkt bei dir.</p>
+          <span class="price" data-key="services.rug.price">29 €/m² (+ 15 € Anfahrt)</span>
         </div>
       </div>
       <div class="card">
-        <img src="img/auto.jpg" alt="Innenraumauto wird abgesaugt">
+        <img src="img/auto.jpg" alt="" >
         <div class="card-content">
-          <h3>Autoinnenreinigung</h3>
-          <p>Gründliches Saugen, Polsterpflege &amp; Frischduft-Finish.</p>
-          <span class="price">ab 59 € pro Fahrzeug (+ 15 € Anfahrt)</span>
+          <h3 data-key="services.car.title">Autoinnenreinigung</h3>
+          <p data-key="services.car.text">Gründliches Saugen, Polsterpflege & Frischduft-Finish.</p>
+          <span class="price" data-key="services.car.price">ab 59 € pro Fahrzeug (+ 15 € Anfahrt)</span>
         </div>
       </div>
       <div class="card">
-        <img src="img/stuhl.jpg" alt="Profi reinigt Stuhlpolster">
+        <img src="img/stuhl.jpg" alt="" >
         <div class="card-content">
-          <h3>Stuhlpolster­reinigung</h3>
-          <p>Zielgerichtete Reinigung für Einzel- oder Bürostühle.</p>
-          <span class="price">ab 12 € pro Stuhl (+ 15 € Anfahrt)</span>
+          <h3 data-key="services.chair.title">Stuhlpolster­reinigung</h3>
+          <p data-key="services.chair.text">Zielgerichtete Reinigung für Einzel- oder Bürostühle.</p>
+          <span class="price" data-key="services.chair.price">ab 12 € pro Stuhl (+ 15 € Anfahrt)</span>
         </div>
       </div>
     </div>
@@ -98,32 +78,32 @@
 
   <!-- KONTAKT -->
   <section id="kontakt" class="contact">
-    <h2 class="section-title">Kontakt</h2>
+    <h2 class="section-title" data-key="contact.title">Kontakt</h2>
     <form class="contact-form" action="https://formspree.io/f/xdkzyqzv" method="POST">
       <div class="form-row">
-        <label>Art der Anfrage</label>
+        <label data-key="contact.labelRequest">Art der Anfrage</label>
         <select name="service" required>
-          <option value="">-- Bitte wählen --</option>
-          <option value="Sofareinigung">Sofareinigung</option>
-          <option value="Teppichreinigung">Teppichreinigung</option>
-          <option value="Autoinnenreinigung">Autoinnenreinigung</option>
-          <option value="Stuhlpolster­reinigung">Stuhlpolster­reinigung</option>
-          <option value="Anderes">Anderes</option>
+          <option value="">{{ translate('contact.option.choose') }}</option>
+          <option value="Sofareinigung" data-key="contact.option.sofa">Sofareinigung</option>
+          <option value="Teppichreinigung" data-key="contact.option.rug">Teppichreinigung</option>
+          <option value="Autoinnenreinigung" data-key="contact.option.car">Autoinnenreinigung</option>
+          <option value="Stuhlpolster­reinigung" data-key="contact.option.chair">Stuhlpolster­reinigung</option>
+          <option value="Anderes" data-key="contact.option.other">Anderes</option>
         </select>
       </div>
       <div class="form-row">
-        <label>Deine E-Mail</label>
-        <input type="email" name="email" placeholder="E-Mail hier eingeben" required>
+        <label data-key="contact.labelEmail">Deine E-Mail</label>
+        <input type="email" name="email" placeholder="" data-placeholder-key="contact.placeholder.email" required>
       </div>
       <div class="form-row">
-        <label>Nachricht</label>
-        <textarea name="message" rows="4" placeholder="Deine Nachricht…"></textarea>
+        <label data-key="contact.labelMessage">Nachricht</label>
+        <textarea name="message" rows="4" placeholder="" data-placeholder-key="contact.placeholder.message"></textarea>
       </div>
-      <button type="submit" class="btn-submit">Absenden</button>
+      <button type="submit" class="btn-submit" data-key="contact.button">Absenden</button>
     </form>
     <div class="contact-info">
-      <p><strong>E-Mail:</strong> fevronia63@gmail.com</p>
-      <p><strong>Telefon:</strong> +49 1590 6655267</p>
+      <p><strong data-key="contact.info.emailLabel">E-Mail:</strong> fevronia63@gmail.com</p>
+      <p><strong data-key="contact.info.phoneLabel">Telefon:</strong> +49 1590 6655267</p>
     </div>
   </section>
 
@@ -139,14 +119,91 @@
     "url": "https://1mindnova.github.io/fav-autoclean/",
     "address": {
       "@type": "PostalAddress",
-      "addressCountry": "DE"
+      "addressCountry": "DEU"
     }
   }
   </script>
 
   <footer class="footer">
-    <p>&copy; 2025 Fav AutoClean • <a href="#services">Nach oben</a></p>
+    <p>&copy; 2025 Fav AutoClean • <a href="#services" data-key="footer.top">Nach oben</a></p>
   </footer>
+
+  <!-- TRANSLATION SCRIPT -->
+  <script>
+    // 1) Text-Dictionary
+    const dict = {
+      de: {
+        "nav.services":"Leistungen","nav.contact":"Kontakt",
+        "hero.title":"Fav AutoClean – Deine Profi-Reinigung",
+        "hero.subtitle":"Deine Profi-Reinigung für Sofa, Teppich, Auto & Stuhl",
+        "services.title":"Leistungen",
+        "services.sofa.title":"Sofareinigung","services.sofa.text":"Schonende, materialgerechte Pflege für Polster- & Ledersofas.","services.sofa.price":"ab 45 € pro Sofa (+ 15 € Anfahrt)",
+        "services.rug.title":"Teppichreinigung","services.rug.text":"Intensive Tiefenreinigung & Geruchsentfernung direkt bei dir.","services.rug.price":"29 €/m² (+ 15 € Anfahrt)",
+        "services.car.title":"Autoinnenreinigung","services.car.text":"Gründliches Saugen, Polsterpflege & Frischduft-Finish.","services.car.price":"ab 59 € pro Fahrzeug (+ 15 € Anfahrt)",
+        "services.chair.title":"Stuhlpolster­reinigung","services.chair.text":"Zielgerichtete Reinigung für Einzel- oder Bürostühle.","services.chair.price":"ab 12 € pro Stuhl (+ 15 € Anfahrt)",
+        "contact.title":"Kontakt",
+        "contact.labelRequest":"Art der Anfrage","contact.option.choose":"-- Bitte wählen --",
+        "contact.option.sofa":"Sofareinigung","contact.option.rug":"Teppichreinigung","contact.option.car":"Autoinnenreinigung","contact.option.chair":"Stuhlpolster­reinigung","contact.option.other":"Anderes",
+        "contact.labelEmail":"Deine E-Mail","contact.placeholder.email":"E-Mail hier eingeben",
+        "contact.labelMessage":"Nachricht","contact.placeholder.message":"Deine Nachricht…",
+        "contact.button":"Absenden",
+        "contact.info.emailLabel":"E-Mail:","contact.info.phoneLabel":"Telefon:",
+        "footer.top":"Nach oben"
+      },
+      en: {
+        "nav.services":"Services","nav.contact":"Contact",
+        "hero.title":"Fav AutoClean – Your Pro Cleaning","hero.subtitle":"Your professional cleaning for sofa, rug, car & chair",
+        "services.title":"Services",
+        "services.sofa.title":"Sofa Cleaning","services.sofa.text":"Gentle, material-appropriate care for upholstered & leather sofas.","services.sofa.price":"from 45 € per sofa (+ 15 € travel)",
+        "services.rug.title":"Rug Cleaning","services.rug.text":"Intensive deep cleaning & odor removal at your place.","services.rug.price":"29 €/m² (+ 15 € travel)",
+        "services.car.title":"Car Interior Cleaning","services.car.text":"Thorough vacuuming, upholstery care & fresh-scent finish.","services.car.price":"from 59 € per vehicle (+ 15 € travel)",
+        "services.chair.title":"Chair Upholstery Cleaning","services.chair.text":"Targeted cleaning for single or office chairs.","services.chair.price":"from 12 € per chair (+ 15 € travel)",
+        "contact.title":"Contact",
+        "contact.labelRequest":"Type of request","contact.option.choose":"-- Please choose --",
+        "contact.option.sofa":"Sofa Cleaning","contact.option.rug":"Rug Cleaning","contact.option.car":"Car Interior","contact.option.chair":"Chair Cleaning","contact.option.other":"Other",
+        "contact.labelEmail":"Your E-Mail","contact.placeholder.email":"Enter your email",
+        "contact.labelMessage":"Message","contact.placeholder.message":"Your message…",
+        "contact.button":"Send",
+        "contact.info.emailLabel":"E-Mail:","contact.info.phoneLabel":"Phone:",
+        "footer.top":"Back to top"
+      },
+      // … füge hier ROM, RUS, TUR, HRV, ESP, ITA, SQ, FRA analog hinzu …
+    };
+
+    // 2) URL-Parameter auslesen
+    const urlParams = new URLSearchParams(location.search);
+    const lang = urlParams.get('lang') || 'de';
+
+    // 3) Select setzen und Optionen bauen
+    const select = document.getElementById('langSelect');
+    Object.keys(dict).forEach(code => {
+      const opt = document.createElement('option');
+      opt.value = code;
+      opt.textContent = code.toUpperCase();
+      if (code === lang) opt.selected = true;
+      select.appendChild(opt);
+    });
+    select.onchange = () => {
+      location.search = '?lang=' + select.value;
+    };
+
+    // 4) Übersetzen aller Elemente
+    function translatePage() {
+      document.querySelectorAll('[data-key]').forEach(el => {
+        const key = el.getAttribute('data-key');
+        if (dict[lang] && dict[lang][key]) {
+          el.textContent = dict[lang][key];
+        }
+      });
+      document.querySelectorAll('[data-placeholder-key]').forEach(el => {
+        const key = el.getAttribute('data-placeholder-key');
+        if (dict[lang] && dict[lang][key]) {
+          el.placeholder = dict[lang][key];
+        }
+      });
+    }
+    translatePage();
+  </script>
 
 </body>
 </html>
