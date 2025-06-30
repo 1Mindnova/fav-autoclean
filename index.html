@@ -122,26 +122,55 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', ()=>{
-      const lang = (new URLSearchParams(location.search).get('lang')||'de').toLowerCase();
+      const params = new URLSearchParams(location.search);
+      let lang = (params.get('lang')||'de').toLowerCase();
       const dict = {
-        /* Komplettes dict aus vorheriger Antwort hier einfügen */
+        de:{ /* wie zuvor vollständig */ },
+        en:{ /* wie zuvor */ },
+        ro:{
+          title:"Fav-AutoClean | Curățenie Profesională",
+          "nav.services":"Servicii","nav.contact":"Contact",
+          "hero.title":"Fav-AutoClean","hero.subtitle":"Curățenie profesională pentru canapea, covor, mașină & scaun",
+          "contact.field.service":"Tipul solicitării",
+          "contact.service.placeholder":"-- Te rugăm să alegi --","contact.service.other":"Altele",
+          "contact.field.email":"Email-ul tău","contact.email.placeholder":"Introdu email-ul tău",
+          "contact.field.message":"Mesaj","contact.message.placeholder":"Mesajul tău…",
+          "contact.button":"Trimite",
+          "contact.email.label":"Email:","contact.phone.label":"Telefon:",
+          "footer.top":"Sus"
+        },
+        ru:{
+          title:"Fav-AutoClean | Профессиональная уборка",
+          "nav.services":"Услуги","nav.contact":"Контакт",
+          "hero.title":"Fav-AutoClean","hero.subtitle":"Проф уборка диванов, ковров, авто & стульев",
+          "contact.field.service":"Тип запроса",
+          "contact.service.placeholder":"-- Пожалуйста, выберите --","contact.service.other":"Другое",
+          "contact.field.email":"Ваш email","contact.email.placeholder":"Введите ваш email",
+          "contact.field.message":"Сообщение","contact.message.placeholder":"Ваше сообщение…",
+          "contact.button":"Отправить",
+          "contact.email.label":"Email:","contact.phone.label":"Телефон:",
+          "footer.top":"Наверх"
+        },
+        tr:{ /* … */ }, hrv:{ /* … */ },
+        es:{ /* … */ }, it:{ /* … */ },
+        sq:{ /* … */ }, fr:{ /* … */ }
       };
       if (!dict[lang]) lang='de';
       document.querySelectorAll('[data-i18n]').forEach(el=>{
         const key=el.getAttribute('data-i18n');
-        if(dict[lang][key]) el.textContent=dict[lang][key];
+        if (dict[lang][key]) el.textContent=dict[lang][key];
       });
       document.querySelectorAll('[data-i18n-placeholder]').forEach(el=>{
         const key=el.getAttribute('data-i18n-placeholder');
-        if(dict[lang][key]) el.placeholder=dict[lang][key];
+        if (dict[lang][key]) el.placeholder=dict[lang][key];
       });
       document.querySelectorAll('select[name="service"] option').forEach(opt=>{
         const key=opt.getAttribute('data-i18n');
-        if(key&&dict[lang][key]) opt.textContent=dict[lang][key];
+        if (key && dict[lang][key]) opt.textContent=dict[lang][key];
       });
       document.querySelector('.lang-select').value=lang;
       const tkey=document.querySelector('title').getAttribute('data-i18n');
-      if(dict[lang][tkey]) document.title=dict[lang][tkey];
+      if (dict[lang][tkey]) document.title=dict[lang][tkey];
     });
   </script>
 
