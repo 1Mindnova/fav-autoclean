@@ -1,10 +1,10 @@
 /* RESET */
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:'Open Sans',sans-serif;background:#f5efe4;color:#333;line-height:1.6;overflow-x:hidden}
+body{font-family:'Open Sans',sans-serif;background:#f5efe4;color:#333;overflow-x:hidden}
 
 /* NAVIGATION */
-.nav{display:flex;align-items:center;justify-content:space-between;background:#1e4128;padding:1rem 2rem;position:sticky;top:0;z-index:100}
+.nav{display:flex;align-items:center;justify-content:space-between;background:#1e4128;padding:1rem 2rem;position:sticky;top:0;z-index:10}
 .nav-left,.nav-center,.nav-right{display:flex;align-items:center}
 .nav-logo{max-height:60px;transform:scale(1.35);transition:transform .3s}
 .nav-logo:hover{transform:scale(1.45)}
@@ -22,7 +22,7 @@ body{font-family:'Open Sans',sans-serif;background:#f5efe4;color:#333;line-heigh
 .badge h1{font-family:'Playfair Display',serif;font-size:3rem;color:#1e4128;margin-bottom:.5rem}
 .badge p{font-size:1.25rem;color:#555}
 
-/* SECTIONS */
+/* SECTION TITLES */
 .section-title{text-align:center;font-family:'Playfair Display',serif;font-size:2.4rem;color:#1e4128;margin:3rem 0 1.5rem;position:relative}
 .section-title::after{content:'';display:block;width:60px;height:3px;background:#a08b53;margin:8px auto 0;border-radius:2px}
 
