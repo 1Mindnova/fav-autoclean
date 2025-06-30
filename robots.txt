@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://1mindnova.github.io/fav-autoclean/sitemap.xml
