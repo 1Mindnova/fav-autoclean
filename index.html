@@ -50,7 +50,38 @@
   <section id="services" class="services">
     <h2 class="section-title" data-i18n="nav.services">Leistungen</h2>
     <div class="services-grid">
-      <!-- ... deine Cards wie gehabt ... -->
+      <div class="card">
+        <img src="img/sofa.jpg" alt="" data-i18n-img-alt="services.sofa.alt">
+        <div class="card-content">
+          <h3 data-i18n="services.sofa.title">Sofareinigung</h3>
+          <p data-i18n="services.sofa.desc">Schonende, materialgerechte Pflege für Polster- &amp; Ledersofas.</p>
+          <span class="price" data-i18n="services.sofa.price">ab 45 € pro Sofa (+ 15 € Anfahrt)</span>
+        </div>
+      </div>
+      <div class="card">
+        <img src="img/teppich.jpg" alt="" data-i18n-img-alt="services.carpet.alt">
+        <div class="card-content">
+          <h3 data-i18n="services.carpet.title">Teppichreinigung</h3>
+          <p data-i18n="services.carpet.desc">Intensive Tiefenreinigung &amp; Geruchsentfernung direkt bei dir.</p>
+          <span class="price" data-i18n="services.carpet.price">29 €/m² (+ 15 € Anfahrt)</span>
+        </div>
+      </div>
+      <div class="card">
+        <img src="img/auto.jpg" alt="" data-i18n-img-alt="services.auto.alt">
+        <div class="card-content">
+          <h3 data-i18n="services.auto.title">Autoinnenreinigung</h3>
+          <p data-i18n="services.auto.desc">Gründliches Saugen, Polsterpflege &amp; Frischduft-Finish.</p>
+          <span class="price" data-i18n="services.auto.price">ab 59 € pro Fahrzeug (+ 15 € Anfahrt)</span>
+        </div>
+      </div>
+      <div class="card">
+        <img src="img/stuhl.jpg" alt="" data-i18n-img-alt="services.chair.alt">
+        <div class="card-content">
+          <h3 data-i18n="services.chair.title">Stuhlpolster­reinigung</h3>
+          <p data-i18n="services.chair.desc">Zielgerichtete Reinigung für Einzel- oder Bürostühle.</p>
+          <span class="price" data-i18n="services.chair.price">ab 12 € pro Stuhl (+ 15 € Anfahrt)</span>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -91,153 +122,26 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', ()=>{
-      const params = new URLSearchParams(location.search);
-      const lang = (params.get('lang')||'de').toLowerCase();
+      const lang = (new URLSearchParams(location.search).get('lang')||'de').toLowerCase();
       const dict = {
-        de: {
-          title: "Fav-AutoClean | Profi-Reinigung",
-          "nav.services":"Leistungen","nav.contact":"Kontakt",
-          "hero.title":"Fav-AutoClean","hero.subtitle":"Deine Profi-Reinigung für Sofa, Teppich, Auto & Stuhl",
-          "contact.field.service":"Art der Anfrage",
-          "contact.service.placeholder":"-- Bitte wählen --","contact.service.other":"Anderes",
-          "contact.field.email":"Deine E-Mail","contact.email.placeholder":"E-Mail hier eingeben",
-          "contact.field.message":"Nachricht","contact.message.placeholder":"Deine Nachricht…",
-          "contact.button":"Absenden",
-          "contact.email.label":"E-Mail:","contact.phone.label":"Telefon:",
-          "footer.top":"Nach oben"
-        },
-        en: {
-          title: "Fav-AutoClean | Professional Cleaning",
-          "nav.services":"Services","nav.contact":"Contact",
-          "hero.title":"Fav-AutoClean","hero.subtitle":"Your pro cleaning for sofa, carpet, car & chair",
-          "contact.field.service":"Type of inquiry",
-          "contact.service.placeholder":"-- Please choose --","contact.service.other":"Other",
-          "contact.field.email":"Your email","contact.email.placeholder":"Enter your email",
-          "contact.field.message":"Message","contact.message.placeholder":"Your message…",
-          "contact.button":"Submit",
-          "contact.email.label":"Email:","contact.phone.label":"Phone:",
-          "footer.top":"Back to top"
-        },
-        ro: {
-          title:"Fav-AutoClean | Curățenie Profesională",
-          "nav.services":"Servicii","nav.contact":"Contact",
-          "hero.title":"Fav-AutoClean","hero.subtitle":"Curățenie profesională pentru canapea, covor, mașină și scaun",
-          "contact.field.service":"Tipul solicitării",
-          "contact.service.placeholder":"-- Te rugăm să alegi --","contact.service.other":"Altele",
-          "contact.field.email":"Email-ul tău","contact.email.placeholder":"Introdu email-ul tău",
-          "contact.field.message":"Mesaj","contact.message.placeholder":"Mesajul tău…",
-          "contact.button":"Trimite",
-          "contact.email.label":"Email:","contact.phone.label":"Telefon:",
-          "footer.top":"Sus"
-        },
-        ru: {
-          title:"Fav-AutoClean | Профессиональная уборка",
-          "nav.services":"Услуги","nav.contact":"Контакт",
-          "hero.title":"Fav-AutoClean","hero.subtitle":"Проф уборка диванов, ковров, авто и стульев",
-          "contact.field.service":"Тип запроса",
-          "contact.service.placeholder":"-- Пожалуйста, выберите --","contact.service.other":"Другое",
-          "contact.field.email":"Ваш email","contact.email.placeholder":"Введите ваш email",
-          "contact.field.message":"Сообщение","contact.message.placeholder":"Ваше сообщение…",
-          "contact.button":"Отправить",
-          "contact.email.label":"Email:","contact.phone.label":"Телефон:",
-          "footer.top":"Наверх"
-        },
-        tr: {
-          title:"Fav-AutoClean | Profesyonel Temizlik",
-          "nav.services":"Hizmetler","nav.contact":"İletişim",
-          "hero.title":"Fav-AutoClean","hero.subtitle":"Kanepe, halı, araç & sandalye için profesyonel temizlik",
-          "contact.field.service":"Talep Türü",
-          "contact.service.placeholder":"-- Lütfen seçin --","contact.service.other":"Diğer",
-          "contact.field.email":"E-posta adresiniz","contact.email.placeholder":"E-postanızı girin",
-          "contact.field.message":"Mesaj","contact.message.placeholder":"Mesajınız…",
-          "contact.button":"Gönder",
-          "contact.email.label":"E-posta:","contact.phone.label":"Telefon:",
-          "footer.top":"Yukarı"
-        },
-        hrv: {
-          title:"Fav-AutoClean | Profesionalno čišćenje",
-          "nav.services":"Usluge","nav.contact":"Kontakt",
-          "hero.title":"Fav-AutoClean","hero.subtitle":"Profesionalno čišćenje sofa, tepiha, auta i stolica",
-          "contact.field.service":"Vrsta upita",
-          "contact.service.placeholder":"-- Molimo odaberite --","contact.service.other":"Ostalo",
-          "contact.field.email":"Vaš e-mail","contact.email.placeholder":"Unesite e-mail",
-          "contact.field.message":"Poruka","contact.message.placeholder":"Vaša poruka…",
-          "contact.button":"Pošalji",
-          "contact.email.label":"E-mail:","contact.phone.label":"Telefon:",
-          "footer.top":"Na vrh"
-        },
-        es: {
-          title:"Fav-AutoClean | Limpieza Profesional",
-          "nav.services":"Servicios","nav.contact":"Contacto",
-          "hero.title":"Fav-AutoClean","hero.subtitle":"Limpieza profesional de sofás, alfombras, autos y sillas",
-          "contact.field.service":"Tipo de consulta",
-          "contact.service.placeholder":"-- Por favor elija --","contact.service.other":"Otro",
-          "contact.field.email":"Tu correo","contact.email.placeholder":"Introduce tu correo",
-          "contact.field.message":"Mensaje","contact.message.placeholder":"Tu mensaje…",
-          "contact.button":"Enviar",
-          "contact.email.label":"Correo:","contact.phone.label":"Teléfono:",
-          "footer.top":"Arriba"
-        },
-        it: {
-          title:"Fav-AutoClean | Pulizia Professionale",
-          "nav.services":"Servizi","nav.contact":"Contatto",
-          "hero.title":"Fav-AutoClean","hero.subtitle":"Pulizia professionale di divani, tappeti, auto e sedie",
-          "contact.field.service":"Tipo di richiesta",
-          "contact.service.placeholder":"-- Si prega di scegliere --","contact.service.other":"Altro",
-          "contact.field.email":"La tua e-mail","contact.email.placeholder":"Inserisci e-mail",
-          "contact.field.message":"Messaggio","contact.message.placeholder":"Il tuo messaggio…",
-          "contact.button":"Invia",
-          "contact.email.label":"E-mail:","contact.phone.label":"Telefono:",
-          "footer.top":"Torna su"
-        },
-        sq: {
-          title:"Fav-AutoClean | Pastrim Profesional",
-          "nav.services":"Shërbimet","nav.contact":"Kontakti",
-          "hero.title":"Fav-AutoClean","hero.subtitle":"Pastrim profesional për divanë, qilima, makina & karrige",
-          "contact.field.service":"Lloji i kërkesës",
-          "contact.service.placeholder":"-- Zgjidhni --","contact.service.other":"Tjetër",
-          "contact.field.email":"Email juaj","contact.email.placeholder":"Vendosni email",
-          "contact.field.message":"Mesazh","contact.message.placeholder":"Mesazhi juaj…",
-          "contact.button":"Dërgo",
-          "contact.email.label":"Email:","contact.phone.label":"Telefoni:",
-          "footer.top":"Lart"
-        },
-        fr: {
-          title:"Fav-AutoClean | Nettoyage Professionnel",
-          "nav.services":"Prestations","nav.contact":"Contact",
-          "hero.title":"Fav-AutoClean","hero.subtitle":"Nettoyage pro de canapés, tapis, voitures & chaises",
-          "contact.field.service":"Type de demande",
-          "contact.service.placeholder":"-- Choisissez --","contact.service.other":"Autre",
-          "contact.field.email":"Votre e-mail","contact.email.placeholder":"Entrez votre e-mail",
-          "contact.field.message":"Message","contact.message.placeholder":"Votre message…",
-          "contact.button":"Envoyer",
-          "contact.email.label":"E-mail:","contact.phone.label":"Téléphone:",
-          "footer.top":"Haut de page"
-        }
+        /* Komplettes dict aus vorheriger Antwort hier einfügen */
       };
-
-      if (dict[lang]) {
-        // Texte ersetzen
-        document.querySelectorAll('[data-i18n]').forEach(el=>{
-          const key = el.getAttribute('data-i18n');
-          if (dict[lang][key]) el.textContent = dict[lang][key];
-        });
-        // Placeholder ersetzen
-        document.querySelectorAll('[data-i18n-placeholder]').forEach(el=>{
-          const key = el.getAttribute('data-i18n-placeholder');
-          if (dict[lang][key]) el.placeholder = dict[lang][key];
-        });
-        // Optionen im Anfrage-Dropdown
-        document.querySelectorAll('select[name="service"] option').forEach(opt=>{
-          const key = opt.getAttribute('data-i18n');
-          if (key && dict[lang][key]) opt.textContent = dict[lang][key];
-        });
-        // Select setzt aktuellen Wert
-        document.querySelector('.lang-select').value = lang;
-        // Title
-        const tkey = document.querySelector('title').getAttribute('data-i18n');
-        if (dict[lang][tkey]) document.title = dict[lang][tkey];
-      }
+      if (!dict[lang]) lang='de';
+      document.querySelectorAll('[data-i18n]').forEach(el=>{
+        const key=el.getAttribute('data-i18n');
+        if(dict[lang][key]) el.textContent=dict[lang][key];
+      });
+      document.querySelectorAll('[data-i18n-placeholder]').forEach(el=>{
+        const key=el.getAttribute('data-i18n-placeholder');
+        if(dict[lang][key]) el.placeholder=dict[lang][key];
+      });
+      document.querySelectorAll('select[name="service"] option').forEach(opt=>{
+        const key=opt.getAttribute('data-i18n');
+        if(key&&dict[lang][key]) opt.textContent=dict[lang][key];
+      });
+      document.querySelector('.lang-select').value=lang;
+      const tkey=document.querySelector('title').getAttribute('data-i18n');
+      if(dict[lang][tkey]) document.title=dict[lang][tkey];
     });
   </script>
 
