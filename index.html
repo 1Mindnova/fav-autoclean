@@ -1,17 +1,26 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+  <!-- Google-Verifizierung -->
   <meta name="google-site-verification" content="rHOKmbsaaZB3rt5_iv7IdIFzc8pCPgNJqlqQ1McG52c" />
+
+  <!-- Charset & Viewport -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Fav AutoClean – Professionelle Reinigung für Sofa, Teppich, Auto & Stuhl. Jetzt anfragen!">
+
+  <!-- Meta-Description -->
+  <meta name="description"
+        content="Fav AutoClean – Professionelle Reinigung für Sofa, Teppich, Auto & Stuhl. Jetzt anfragen!">
+
+  <!-- Title mit Keyword -->
   <title>Fav AutoClean • Profi-Reinigung für Sofa, Teppich & Auto</title>
+
+  <!-- Fonts & CSS -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- NAVIGATION -->
   <nav class="nav">
     <div class="nav-left">
       <img src="img/logo.jpg" alt="Fav AutoClean Logo" class="nav-logo">
@@ -21,13 +30,13 @@
       <a href="#kontakt">Kontakt</a>
     </div>
     <div class="nav-right">
-      <select id="langSelect" class="lang-select" onchange="switchLanguage(this.value)">
+      <select class="lang-select">
         <option value="de">Deutsch</option>
         <option value="en">Englisch</option>
         <option value="ro">Rumänisch</option>
         <option value="ru">Russisch</option>
         <option value="tr">Türkisch</option>
-        <option value="hr">Kroatisch</option>
+        <option value="hrv">Kroatisch</option>
         <option value="es">Spanisch</option>
         <option value="it">Italienisch</option>
         <option value="sq">Albanisch</option>
@@ -36,143 +45,86 @@
     </div>
   </nav>
 
-  <!-- HERO -->
   <header class="hero">
     <div class="hero-img-wrapper">
       <img src="img/couch.jpg" alt="Sauberes Sofa mit Katze" class="hero-img">
       <div class="badge">
-        <h1 data-de="Fav-AutoClean" data-en="Fav-AutoClean" data-ro="Fav-AutoClean" data-ru="Fav-AutoClean" data-tr="Fav-AutoClean" data-hr="Fav-AutoClean" data-es="Fav-AutoClean" data-it="Fav-AutoClean" data-sq="Fav-AutoClean" data-fr="Fav-AutoClean">Fav-AutoClean</h1>
-        <p data-de="Deine Profi-Reinigung für Sofa, Teppich, Auto & Stuhl"
-           data-en="Your pro cleaning for sofa, carpet, car & chair"
-           data-ro="Curățenie profesională pentru canapea, covor, mașină & scaun"
-           data-ru="Профессиональная чистка диванов, ковров, авто и стульев"
-           data-tr="Profesyonel temizlik: koltuk, halı, araç & sandalye"
-           data-hr="Profesionalno čišćenje za sofu, tepih, auto & stolicu"
-           data-es="Limpieza profesional de sofá, alfombra, coche & silla"
-           data-it="Pulizia professionale per divani, tappeti, auto & sedie"
-           data-sq="Pastrim profesional për divan, tapet, makinë & karrige"
-           data-fr="Nettoyage professionnel pour canapé, tapis, voiture & chaise">
-          Deine Profi-Reinigung für Sofa, Teppich, Auto & Stuhl
-        </p>
+        <h1>Fav AutoClean – Deine Profi-Reinigung</h1>
+        <p>Deine Profi-Reinigung für Sofa, Teppich, Auto &amp; Stuhl</p>
       </div>
     </div>
   </header>
 
-  <!-- SERVICES -->
   <section id="services" class="services">
-    <h2 class="section-title" data-de="Leistungen" data-en="Services" data-ro="Servicii" data-ru="Услуги" data-tr="Hizmetler" data-hr="Usluge" data-es="Servicios" data-it="Servizi" data-sq="Shërbimet" data-fr="Services">Leistungen</h2>
+    <h2 class="section-title">Leistungen</h2>
     <div class="services-grid">
       <div class="card">
         <img src="img/sofa.jpg" alt="Profi-Gerät reinigt graues Stoffsofa">
         <div class="card-content">
-          <h3 data-de="Sofareinigung" data-en="Sofa Cleaning" data-ro="Curățare canapea" data-ru="Чистка дивана" data-tr="Koltuk Temizliği" data-hr="Čišćenje sofe" data-es="Limpieza de sofá" data-it="Pulizia divani" data-sq="Pastrim divani" data-fr="Nettoyage canapé">Sofareinigung</h3>
-          <p data-de="Schonende, materialgerechte Pflege für Polster- & Ledersofas."
-             data-en="Gentle, material-safe care for fabric & leather sofas."
-             data-ro="Îngrijire delicată, potrivită pentru material, pentru canapele țesătură & piele."
-             data-ru="Деликатный уход с учетом материала для тканевых и кожаных диванов."
-             data-tr="Nazik, malzemeye uygun bakım: kumaş & deri koltuklar."
-             data-hr="Nježna, prilagođena materijalu njega za stolice & kožne sofe."
-             data-es="Cuidado suave y adecuado al material para sofás de tela y cuero."
-             data-it="Cura delicata, adatta al materiale, per divani in tessuto & pelle."
-             data-sq="Trajtim i butë, i përshtatshëm për materialin, për divane prej lëkure & pëlhure."
-             data-fr="Soin doux et adapté au matériau pour canapés tissu & cuir.">
-            Schonende, materialgerechte Pflege für Polster- & Ledersofas.
-          </p>
-          <span class="price" data-de="ab 45 € pro Sofa (+ 15 € Anfahrt)" data-en="from €45 per sofa (+ €15 travel)" data-ro="de la 45 € per canapea (+ 15 € transport)" data-ru="от 45 € за диван (+ 15 € выезд)" data-tr="45 €'dan itibaren (14) koltuk (+ 15 € servis)" data-hr="od 45 € po sofi (+ 15 € dolazak)" data-es="desde 45 € por sofá (+ 15 € desplazamiento)" data-it="da 45 € per divano (+ 15 € trasferta)" data-sq="nga 45 € për divan (+ 15 € transport)" data-fr="à partir de 45 € par canapé (+ 15 € déplacement)">ab 45 € pro Sofa (+ 15 € Anfahrt)</span>
+          <h3>Sofareinigung</h3>
+          <p>Schonende, materialgerechte Pflege für Polster- &amp; Ledersofas.</p>
+          <span class="price">ab 45 € pro Sofa (+ 15 € Anfahrt)</span>
         </div>
       </div>
       <div class="card">
         <img src="img/teppich.jpg" alt="Maschine reinigt Teppich mit Schaum">
         <div class="card-content">
-          <h3 data-de="Teppichreinigung" data-en="Carpet Cleaning" data-ro="Curățare covor" data-ru="Чистка ковров" data-tr="Halı Temizliği" data-hr="Čišćenje tepiha" data-es="Limpieza de alfombras" data-it="Pulizia tappeti" data-sq="Pastrim tapeteshi" data-fr="Nettoyage tapis">Teppichreinigung</h3>
-          <p data-de="Intensive Tiefenreinigung & Geruchsentfernung direkt bei dir."
-             data-en="Deep cleaning & odor removal right at your place."
-             data-ro="Curățare în profunzime & îndepărtarea mirosurilor direct la tine."
-             data-ru="Глубокая чистка и удаление запахов у вас дома."
-             data-tr="Derin temizlik & koku giderme size özel."
-             data-hr="Dubinsko čišćenje & uklanjanje mirisa kod vas."
-             data-es="Limpieza profunda y eliminación de olores en tu domicilio."
-             data-it="Pulizia profonda e rimozione odori a domicilio."
-             data-sq="Pastrim i thellë & heqja e erërave në vendin tënd."
-             data-fr="Nettoyage en profondeur & élimination des odeurs à domicile.">
-            Intensive Tiefen­reinigung & Geruchs­entfernung direkt bei dir.
-          </p>
-          <span class="price" data-de="29 €/m² (+ 15 € Anfahrt)" data-en="€29/m² (+ €15 travel)" data-ro="29 €/m² (+ 15 € transport)" data-ru="29 €/м² (+ 15 € выезд)" data-tr="29 €/m² (+ 15 € servis)" data-hr="29 €/m² (+ 15 € dolazak)" data-es="29 €/m² (+ 15 € desplazamiento)" data-it="29 €/m² (+ 15 € trasferta)" data-sq="29 €/m² (+ 15 € transport)" data-fr="29 €/m² (+ 15 € déplacement)">29 €/m² (+ 15 € Anfahrt)</span>
+          <h3>Teppichreinigung</h3>
+          <p>Intensive Tiefenreinigung &amp; Geruchsentfernung direkt bei dir.</p>
+          <span class="price">29 €/m² (+ 15 € Anfahrt)</span>
         </div>
       </div>
       <div class="card">
         <img src="img/auto.jpg" alt="Innenraumauto wird abgesaugt">
         <div class="card-content">
-          <h3 data-de="Autoinnenreinigung" data-en="Car Interior Cleaning" data-ro="Curățare interior auto" data-ru="Чистка салона" data-tr="Araç İç Temizliği" data-hr="Čišćenje unutrašnjosti auta" data-es="Limpieza interior coche" data-it="Pulizia interni auto" data-sq="Pastrim brendësie makine" data-fr="Nettoyage intérieur voiture">Autoinnen­reinigung</h3>
-          <p data-de="Gründliches Saugen, Polsterpflege & Frischduft-Finish."
-             data-en="Thorough vacuuming, upholstery care & fresh-scent finish."
-             data-ro="Aspirare temeinică, îngrijire tapițerie & parfum proaspăt."
-             data-ru="Тщательная уборка пылесосом, уход за обивкой & свежий аромат."
-             data-tr="Titiz vakum, döşeme bakımı & ferah koku."
-             data-hr="Temeljito usisavanje, njega presvlaka & svjež miris."
-             data-es="Aspirado profundo, cuidado de tapicería & acabado perfumado."
-             data-it="Aspirazione profonda, cura tappezzeria & finitura profumata."
-             data-sq="Pastrim i thellë, kujdes për mbulesat & aromë e freskët."
-             data-fr="Aspirateur en profondeur, soin des tissus & finition parfumée.">
-            Gründliches Saugen, Polsterpflege & Frischduft-Finish.
-          </p>
-          <span class="price" data-de="ab 59 € pro Fahrzeug (+ 15 € Anfahrt)" data-en="from €59 per vehicle (+ €15 travel)" data-ro="de la 59 € per vehicul (+ 15 € transport)" data-ru="от 59 € за авто (+ 15 € выезд)" data-tr="59 €'dan itibaren araç (+ 15 € servis)" data-hr="od 59 € po vozilu (+ 15 € dolazak)" data-es="desde 59 € por vehículo (+ 15 € desplazamiento)" data-it="da 59 € per veicolo (+ 15 € trasferta)" data-sq="nga 59 € për automjet (+ 15 € transport)" data-fr="à partir de 59 € par véhicule (+ 15 € déplacement)">ab 59 € pro Fahrzeug (+ 15 € Anfahrt)</span>
+          <h3>Autoinnenreinigung</h3>
+          <p>Gründliches Saugen, Polsterpflege &amp; Frischduft-Finish.</p>
+          <span class="price">ab 59 € pro Fahrzeug (+ 15 € Anfahrt)</span>
         </div>
       </div>
       <div class="card">
         <img src="img/stuhl.jpg" alt="Profi reinigt Stuhlpolster">
         <div class="card-content">
-          <h3 data-de="Stuhlpolster­reinigung" data-en="Chair Upholstery Cleaning" data-ro="Curățare tapițerie scaune" data-ru="Чистка обивки стульев" data-tr="Sandalye Döşeme Temizliği" data-hr="Čišćenje tapecirunga stolica" data-es="Limpieza tapicería sillas" data-it="Pulizia tappezzeria sedie" data-sq="Pastrim tapeteshi karriges" data-fr="Nettoyage tissus chaises">Stuhlpolster­reinigung</h3>
-          <p data-de="Zielgerichtete Reinigung für Einzel- oder Bürostühle."
-             data-en="Targeted cleaning for single or office chairs."
-             data-ro="Curățare țintită pentru scaune individuale sau de birou."
-             data-ru="Таргетированная чистка отдельных или офисных стульев."
-             data-tr="Tekli veya ofis sandalyeleri için odaklı temizlik."
-             data-hr="Ciljano čišćenje pojedinačnih ili uredskih stolica."
-             data-es="Limpieza dirigida para sillas individuales u oficina."
-             data-it="Pulizia mirata per sedie singole o da ufficio."
-             data-sq="Pastrim i synuar për karrige individuale apo zyre."  
-             data-fr="Nettoyage ciblé pour chaises individuelles ou de bureau.">
-            Zielgerichtete Reinigung für Einzel- oder Bürostühle.
-          </p>
-          <span class="price" data-de="ab 12 € pro Stuhl (+ 15 € Anfahrt)" data-en="from €12 per chair (+ €15 travel)" data-ro="de la 12 € per scaun (+ 15 € transport)" data-ru="от 12 € за стул (+ 15 € выезд)" data-tr="12 €'dan itibaren sandalye (+ 15 € servis)" data-hr="od 12 € po stolici (+ 15 € dolazak)" data-es="desde 12 € por silla (+ 15 € desplazamiento)" data-it="da 12 € per sedia (+ 15 € trasferta)" data-sq="nga 12 € për karrige (+ 15 € transport)" data-fr="à partir de 12 € par chaise (+ 15 € déplacement)">ab 12 € pro Stuhl (+ 15 € Anfahrt)</span>
+          <h3>Stuhlpolster­reinigung</h3>
+          <p>Zielgerichtete Reinigung für Einzel- oder Bürostühle.</p>
+          <span class="price">ab 12 € pro Stuhl (+ 15 € Anfahrt)</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- KONTAKT -->
   <section id="kontakt" class="contact">
-    <h2 class="section-title" data-de="Kontakt" data-en="Contact" data-ro="Contact" data-ru="Контакт" data-tr="İletişim" data-hr="Kontakt" data-es="Contacto" data-it="Contatto" data-sq="Kontakt" data-fr="Contact">Kontakt</h2>
-    <form class="contact-form" action="https://formspree.io/f/xdkzyqzv" method="POST">
+    <h2 class="section-title">Kontakt</h2>
+    <form class="contact-form"
+          action="https://formspree.io/f/xldlekbj"
+          method="POST">
       <div class="form-row">
-        <label data-de="Art der Anfrage" data-en="Type of Inquiry" data-ro="Tipul solicitării" data-ru="Тип запроса" data-tr="Talep Türü" data-hr="Vrsta upita" data-es="Tipo de consulta" data-it="Tipo di richiesta" data-sq="Lloji i kërkesës" data-fr="Type de demande">Art der Anfrage</label>
+        <label>Art der Anfrage</label>
         <select name="service" required>
-          <option value="" data-de="-- Bitte wählen --" data-en="-- Please choose --" data-ro="-- Alegeți --" data-ru="-- Выберите --" data-tr="-- Lütfen seçin --" data-hr="-- Molimo odaberite --" data-es="-- Por favor elija --" data-it="-- Seleziona --" data-sq="-- Ju lutemi zgjidhni --" data-fr="-- Veuillez choisir --">-- Bitte wählen --</option>
-          <option value="Sofareinigung" data-de="Sofareinigung" data-en="Sofa Cleaning" data-ro="Curățare canapea" data-ru="Чистка дивана" data-tr="Koltuk Temizliği" data-hr="Čišćenje sofe" data-es="Limpieza de sofá" data-it="Pulizia divani" data-sq="Pastrim divani" data-fr="Nettoyage canapé">Sofareinigung</option>
-          <option value="Teppichreinigung" data-de="Teppichreinigung" data-en="Carpet Cleaning" data-ro="Curățare covor" data-ru="Чистка ковров" data-tr="Halı Temizliği" data-hr="Čišćenje tepiha" data-es="Limpieza de alfombras" data-it="Pulizia tappeti" data-sq="Pastrim tapeteshi" data-fr="Nettoyage tapis">Teppichreinigung</option>
-          <option value="Autoinnenreinigung" data-de="Autoinnenreinigung" data-en="Car Interior Cleaning" data-ro="Curățare interior auto" data-ru="Чистка салона" data-tr="Araç İç Temizliği" data-hr="Čišćenje unutrašnjosti auta" data-es="Limpieza interior coche" data-it="Pulizia interni auto" data-sq="Pastrim brendësie makine" data-fr="Nettoyage intérieur voiture">Autoinnenreinigung</option>
-          <option value="Stuhlpolsterreinigung" data-de="Stuhlpolster­reinigung" data-en="Chair Upholstery Cleaning" data-ro="Curățare tapițerie scaune" data-ru="Чистка обивки стульев" data-tr="Sandalye Döşeme Temizliği" data-hr="Čišćenje tapecirunga stolica" data-es="Limpieza tapicería sillas" data-it="Pulizia tappezzeria sedie" data-sq="Pastrim tapeteshi karriges" data-fr="Nettoyage tissus chaises">Stuhlpolster­reinigung</option>
-          <option value="Anderes" data-de="Anderes" data-en="Other" data-ro="Altceva" data-ru="Другое" data-tr="Diğer" data-hr="Drugo" data-es="Otro" data-it="Altro" data-sq="Tjetër" data-fr="Autre">Anderes</option>
+          <option value="">-- Bitte wählen --</option>
+          <option value="Sofareinigung">Sofareinigung</option>
+          <option value="Teppichreinigung">Teppichreinigung</option>
+          <option value="Autoinnenreinigung">Autoinnenreinigung</option>
+          <option value="Stuhlpolster­reinigung">Stuhlpolster­reinigung</option>
+          <option value="Anderes">Anderes</option>
         </select>
       </div>
       <div class="form-row">
-        <label data-de="Deine E-Mail" data-en="Your Email" data-ro="Email-ul tău" data-ru="Ваш E-mail" data-tr="E-postanız" data-hr="Vaš email" data-es="Tu correo" data-it="La tua email" data-sq="Email juaj" data-fr="Votre email">Deine E-Mail</label>
+        <label>Deine E-Mail</label>
         <input type="email" name="email" placeholder="E-Mail hier eingeben" required>
       </div>
       <div class="form-row">
-        <label data-de="Nachricht" data-en="Message" data-ro="Mesaj" data-ru="Сообщение" data-tr="Mesaj" data-hr="Poruka" data-es="Mensaje" data-it="Messaggio" data-sq="Mesazhi" data-fr="Message">Nachricht</label>
+        <label>Nachricht</label>
         <textarea name="message" rows="4" placeholder="Deine Nachricht…"></textarea>
       </div>
-      <button type="submit" class="btn-submit" data-de="Absenden" data-en="Send" data-ro="Trimite" data-ru="Отправить" data-tr="Gönder" data-hr="Pošalji" data-es="Enviar" data-it="Invia" data-sq="Dërgo" data-fr="Envoyer">Absenden</button>
+      <button type="submit" class="btn-submit">Absenden</button>
     </form>
     <div class="contact-info">
-      <p><strong data-de="E-Mail:" data-en="Email:" data-ro="Email:" data-ru="E-mail:" data-tr="E-posta:" data-hr="E-mail:" data-es="Email:" data-it="Email:" data-sq="Email:" data-fr="Email:">E-Mail:</strong> fevronia63@gmail.com</p>
-      <p><strong data-de="Telefon:" data-en="Phone:" data-ro="Telefon:" data-ru="Телефон:" data-tr="Telefon:" data-hr="Telefon:" data-es="Teléfono:" data-it="Telefono:" data-sq="Telefon:" data-fr="Téléphone:">Telefon:</strong> +49 1590 6655267</p>
+      <p><strong>E-Mail:</strong> fav.autoclean@gmail.com</p>
+      <p><strong>Telefon:</strong> +49 1590 6655267</p>
     </div>
   </section>
 
-  <!-- LocalBusiness Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -180,7 +132,7 @@
     "name": "Fav AutoClean",
     "description": "Profi-Reinigung für Sofa, Teppich, Auto & Stuhl",
     "telephone": "+49 1590 6655267",
-    "email": "fevronia63@gmail.com",
+    "email": "fav.autoclean@gmail.com",
     "url": "https://1mindnova.github.io/fav-autoclean/",
     "address": {
       "@type": "PostalAddress",
@@ -193,15 +145,5 @@
     <p>&copy; 2025 Fav AutoClean • <a href="#services">Nach oben</a></p>
   </footer>
 
-  <script>
-    function switchLanguage(lang) {
-      document.documentElement.lang = lang;
-      document.querySelectorAll('[data-' + lang + ']').forEach(el => {
-        el.textContent = el.getAttribute('data-' + lang);
-      });
-    }
-    // initial load
-    switchLanguage('de');
-  </script>
 </body>
 </html>
